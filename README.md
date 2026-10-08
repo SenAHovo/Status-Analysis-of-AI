@@ -20,7 +20,6 @@
 
 任务从报告请求与偏好出发，由主控完成意图解析和四章编排；网络搜索 Agent、证据索引和文档 Agent 依次完成研究、检索与写作。审核发现缺口或修订建议时，会触发定向补证和章节修订，再回到同一审核口径，最终组装并导出 Markdown 与 PDF 报告。
 
-可编辑源图：[task-chain-overview.vsdx](assets/task-chain-overview.vsdx)。
 
 ## 环境要求
 
