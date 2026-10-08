@@ -1,0 +1,13 @@
+{
+  "schema_version": "1",
+  "source_id": "tavily-fbf04878a66f-5",
+  "source_url": "https://www.probesto.com/cn/%E4%BB%80%E4%B9%88%E6%98%AF%E6%83%8A%E6%81%90%E5%8F%91%E4%BD%9C%EF%BC%9F%E7%97%87%E7%8A%B6%E5%92%8C%E4%BD%A0%E5%BA%94%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88",
+  "title": "什么是惊恐发作？症状和你应该做什么 - Probesto CN",
+  "provider": "tavily",
+  "tool": "tavily_extract",
+  "extract_depth": "basic",
+  "content_format": "markdown",
+  "content_hash": "6381624cecff0c492bd94c1621697ffe222e40c3757e76ed0db12ecc03288705",
+  "extract_ref": ".\\raw\\search\\query-4a6b2f6b5a65821c.json",
+  "content_ref": ".\\raw\\pages\\page-6562fbb082640956.md"
+}

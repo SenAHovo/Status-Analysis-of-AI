@@ -1,0 +1,179 @@
+{
+  "schema_version": "1",
+  "markdown_artifact": {
+    "schema_version": "1",
+    "artifact_id": "artifact-chapter-b02b949b9050a5052232e8513cf8e04c",
+    "run_id": "teach-20260930T071526421985Z",
+    "version": "1",
+    "kind": "chapter_markdown",
+    "mime_type": "text/markdown",
+    "size": 8786,
+    "hash": "f71fc739784ec79f4738bf21e25dc9bbba0b6e5297ce407cfc81ddffc3da23b6",
+    "access_ref": ".\\chapters\\recommendations\\v1.md",
+    "input_versions": {
+      "skill": "3c93f6be7b5d87f91edbfdbaf3078a530d36efb080edb9ee9c43945b9c49954b",
+      "outline": "1"
+    }
+  },
+  "citations": [
+    {
+      "number": 1,
+      "source_ids": [
+        "tavily-7041b75ed906-5"
+      ],
+      "title": "我国人工智能风险分级分类监管制度研究 ——域外比较与本土构建",
+      "url": "https://www.kjjb.org/article/2026/1001-7348/2026-43-1-011.htm",
+      "raw_refs": [
+        ".\\raw\\search\\query-8b9e08a22ca3d72d.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-88495acaddaf6d5a.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-6af3acee2c936fae:4",
+        "teach-20260930T071526421985Z:chunk-6af3acee2c936fae:2",
+        "teach-20260930T071526421985Z:chunk-6af3acee2c936fae:5"
+      ]
+    },
+    {
+      "number": 2,
+      "source_ids": [
+        "tavily-30c64c26ae63-2"
+      ],
+      "title": "介绍2025年人工智能指数报告 - Stanford HAI",
+      "url": "https://hai.stanford.edu/assets/files/hai_ai_index_report_2025_chinese_version_061325.pdf",
+      "raw_refs": [
+        ".\\raw\\search\\query-3d054d3e690b2af8.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-7400902f4f3f6833.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-c4465306a14585ae:1",
+        "teach-20260930T071526421985Z:chunk-c4465306a14585ae:4",
+        "teach-20260930T071526421985Z:chunk-9d84f36e0c8f2bda:1",
+        "teach-20260930T071526421985Z:chunk-16532b08de94e199:3",
+        "teach-20260930T071526421985Z:chunk-ab19ec71632935ce:0",
+        "teach-20260930T071526421985Z:chunk-20f3b5d67982c790:1",
+        "teach-20260930T071526421985Z:chunk-6d7522ec9a0406f5:4",
+        "teach-20260930T071526421985Z:chunk-72eb5d63c9dd9868:1",
+        "teach-20260930T071526421985Z:chunk-16532b08de94e199:1",
+        "teach-20260930T071526421985Z:chunk-16532b08de94e199:0",
+        "teach-20260930T071526421985Z:chunk-20f3b5d67982c790:3",
+        "teach-20260930T071526421985Z:chunk-53492c1bc8fe0697:0",
+        "teach-20260930T071526421985Z:chunk-5e74271d7424a44b:2",
+        "teach-20260930T071526421985Z:chunk-884748ac4a3c8f2e:1",
+        "teach-20260930T071526421985Z:chunk-ab19ec71632935ce:3",
+        "teach-20260930T071526421985Z:chunk-5e74271d7424a44b:3",
+        "teach-20260930T071526421985Z:chunk-884748ac4a3c8f2e:3",
+        "teach-20260930T071526421985Z:chunk-72eb5d63c9dd9868:0",
+        "teach-20260930T071526421985Z:chunk-3b8275590fdcfc02:6",
+        "teach-20260930T071526421985Z:chunk-8dc886204fc3b8cb:6"
+      ]
+    },
+    {
+      "number": 3,
+      "source_ids": [
+        "tavily-7041b75ed906-2"
+      ],
+      "title": "前沿人工智能风险管理框架(v1.0)",
+      "url": "https://concordia-ai.com/wp-content/uploads/2025/07/Frontier-AI-Ri[redacted].0-cn.pdf",
+      "raw_refs": [
+        ".\\raw\\search\\query-8b9e08a22ca3d72d.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-d92ba4e054c12121.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-80d006db6d77fba8:2",
+        "teach-20260930T071526421985Z:chunk-310ef7cd7166677e:4",
+        "teach-20260930T071526421985Z:chunk-dcb4f9340aee46ad:3",
+        "teach-20260930T071526421985Z:chunk-80d006db6d77fba8:0",
+        "teach-20260930T071526421985Z:chunk-dcb4f9340aee46ad:6",
+        "teach-20260930T071526421985Z:chunk-80d006db6d77fba8:5",
+        "teach-20260930T071526421985Z:chunk-c85c1d08786a28d1:0",
+        "teach-20260930T071526421985Z:chunk-c85c1d08786a28d1:7"
+      ]
+    },
+    {
+      "number": 4,
+      "source_ids": [
+        "tavily-7041b75ed906-3"
+      ],
+      "title": "企业智能之旅（6）：安全与负责任的 AI | 亚马逊AWS官方博客",
+      "url": "https://aws.amazon.com/cn/blogs/china/the-journey-for-enterprise-to-use-artificial-intelligence-part-six",
+      "raw_refs": [
+        ".\\raw\\search\\query-8b9e08a22ca3d72d.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-7813d10d9dd245fc.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-29320d778bc3f58e:1"
+      ]
+    },
+    {
+      "number": 5,
+      "source_ids": [
+        "tavily-30c64c26ae63-5"
+      ],
+      "title": "欧盟人工智能法案： 指南",
+      "url": "https://www.twobirds.com/-/media/new-website-content/pdfs/capabilities/artificial-intelligence/eu-ai-act-guide-chinese-version.pdf",
+      "raw_refs": [
+        ".\\raw\\search\\query-3d054d3e690b2af8.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-c16204000ea8f413.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-8c6a0dd67d337e2f:4"
+      ]
+    }
+  ],
+  "evidence_gaps": [
+    {
+      "schema_version": "1",
+      "gap_id": "gap-7e1e30ec149a2f95",
+      "kind": "evidence_limitation",
+      "severity": "hard",
+      "description": "缺少我国人工智能统一立法的最新进展与最终制度安排，现有证据仅能说明\"人工智能法仍未出台\"及治理体系碎片化，无法支撑对具体合规义务边界的判断[6]。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-f7c3339b8c84223a",
+      "kind": "evidence_limitation",
+      "severity": "hard",
+      "description": "缺少可核验的、针对具体建议措施的实证效果数据（如风险管理体系建立后的风险下降幅度、合规投入与收益关系），现有框架多为方法论指引。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-7f070ba87ab8ef15",
+      "kind": "evidence_limitation",
+      "severity": "soft",
+      "description": "缺少面向中国企业管理者的本土化操作指南或行业实践案例，现有建议多需从欧盟法案条款、国际框架与调查数据间接推导。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-9c75d3ff97b443d1",
+      "kind": "evidence_limitation",
+      "severity": "soft",
+      "description": "缺少关于人工智能素养建设投入产出、以及数据获取限制对企业模型开发实际影响的量化证据，相关判断只能作方向性表述。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1",
+  "source_id": "tavily-7041b75ed906-2",
+  "source_url": "https://concordia-ai.com/wp-content/uploads/2025/07/Frontier-AI-Ri[redacted].0-cn.pdf",
+  "title": "前沿人工智能风险管理框架(v1.0)",
+  "provider": "tavily",
+  "tool": "tavily_extract",
+  "extract_depth": "basic",
+  "content_format": "markdown",
+  "content_hash": "ab9418ace1a7081480704770a61f37868d73dd1a3abf25d89885ad25c026a2d2",
+  "extract_ref": ".\\raw\\search\\query-8b9e08a22ca3d72d.json",
+  "content_ref": ".\\raw\\pages\\page-d92ba4e054c12121.md"
+}

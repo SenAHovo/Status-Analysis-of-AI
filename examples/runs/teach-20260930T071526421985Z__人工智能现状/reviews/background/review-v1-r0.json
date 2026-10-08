@@ -1,0 +1,88 @@
+{
+  "schema_version": "1",
+  "section_id": "background",
+  "draft_version": "1",
+  "decision": {
+    "schema_version": "1",
+    "decision": "deliver_with_limits",
+    "run_id": "teach-20260930T071526421985Z",
+    "section_id": "background",
+    "draft_version": "1",
+    "review_round": 0,
+    "issues": [
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-ce3c43f9a3ede0d0",
+        "section_id": "background",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "high",
+        "evidence_refs": [],
+        "requested_change": "缺少中国人工智能产业规模、企业数量、投融资规模等官方统计数据在2020年之后的更新，现有中国产业数据主要来自2019年之前的评述。",
+        "resolution": null
+      },
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-cb96976d40a14020",
+        "section_id": "background",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "high",
+        "evidence_refs": [],
+        "requested_change": "缺少欧盟《人工智能法案》的正式文本条款细节及生效时间表，仅有指数报告对其监管框架的概述。",
+        "resolution": null
+      },
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-4a00351a277fbeb2",
+        "section_id": "background",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "medium",
+        "evidence_refs": [],
+        "requested_change": "各来源对“人工智能”的统计口径（论文、专利、模型、企业应用）定义不一致，无法在本章内完成统一口径的量化比较。",
+        "resolution": null
+      },
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-0964b665a3d5e161",
+        "section_id": "background",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "medium",
+        "evidence_refs": [],
+        "requested_change": "缺少2024年之后中国人工智能政策的最新系统性梳理，政策文本量化研究的样本截至2020年。",
+        "resolution": null
+      }
+    ],
+    "supplement_queries": [],
+    "reason": "存在缺口，但没有可执行的补证查询",
+    "source": "deterministic_fallback",
+    "fallback_reason": "review_structured_output_invalid"
+  },
+  "document_result_ref": {
+    "draft_artifact": {
+      "schema_version": "1",
+      "artifact_id": "artifact-chapter-e9778b0d52079e40d5fa7516ed147a4a",
+      "run_id": "teach-20260930T071526421985Z",
+      "version": "1",
+      "kind": "chapter_markdown",
+      "mime_type": "text/markdown",
+      "size": 8486,
+      "hash": "d8c8b39b9f3d76f25f1c058d051a374544abed9bc4de9b3338a23d4d41aa57cb",
+      "access_ref": ".\\chapters\\background\\v1.md",
+      "input_versions": {
+        "skill": "3c93f6be7b5d87f91edbfdbaf3078a530d36efb080edb9ee9c43945b9c49954b",
+        "outline": "1"
+      }
+    },
+    "citation_map_ref": ".\\chapters\\background\\v1.citations.json",
+    "evidence_bundle_ref": ".\\evidence_bundles\\retrieval-teach-20260930T071526421985Z-background-20260930T071915-beb56289824b.json"
+  },
+  "supplement_plan": null,
+  "revision_effect": null
+}

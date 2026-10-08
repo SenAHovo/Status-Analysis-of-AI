@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ai-status-report"
+version = "0.1.0"
+description = "Three-agent AI status research and reporting teaching project"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "a2a-sdk[http-server]>=1.0,<2",
+    "chromadb>=1,<2",
+    "httpx>=0.28,<0.29",
+    "langgraph>=0.6,<0.7",
+    "markdown2>=2.5,<3",
+    "mcp>=1,<2",
+    "pydantic>=2.9,<3",
+    "python-dotenv>=1.1,<2",
+    "playwright>=1.55,<2",
+    "pyyaml>=6,<7",
+    "tzdata>=2024,<2027",
+    "uvicorn>=0.30,<1",
+]
+
+[project.scripts]
+ai-status = "ai_status_report.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ai_status_report"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100

@@ -1,0 +1,20 @@
+{
+  "run_id": "teach-20260930T071526421985Z",
+  "capacities": {
+    "run": 3000000,
+    "window": 128000,
+    "output": 64000,
+    "search_requests": 60,
+    "retrieval_requests": 120
+  },
+  "estimated": {
+    "run": 1082695
+  },
+  "actual": {
+    "search_requests": 8,
+    "run": 717065
+  },
+  "unknown": {},
+  "reservations": {},
+  "counter": 78
+}

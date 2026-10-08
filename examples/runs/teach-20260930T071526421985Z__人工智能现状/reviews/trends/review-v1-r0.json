@@ -1,0 +1,112 @@
+{
+  "schema_version": "1",
+  "section_id": "trends",
+  "draft_version": "1",
+  "decision": {
+    "schema_version": "1",
+    "decision": "deliver_with_limits",
+    "run_id": "teach-20260930T071526421985Z",
+    "section_id": "trends",
+    "draft_version": "1",
+    "review_round": 0,
+    "issues": [
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-e690f884ccabe858",
+        "section_id": "trends",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "high",
+        "evidence_refs": [],
+        "requested_change": "缺少可核验的推理成本、单位智能成本时间序列原始数据与统一口径，现有“每年40倍降幅”“280倍下降”等数字来自不同机构与估算方法，无法直接比较或外推。",
+        "resolution": null
+      },
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-926b42338518119d",
+        "section_id": "trends",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "high",
+        "evidence_refs": [],
+        "requested_change": "缺少智能体从实验到正式运营的量化转化率、失败原因分布与时间跨度数据，落地节奏判断主要依赖机构定性观察。",
+        "resolution": null
+      },
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-891dc800ec5ada6f",
+        "section_id": "trends",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "high",
+        "evidence_refs": [],
+        "requested_change": "缺少数据使用限制对模型训练实际影响的量化证据（如数据规模、多样性下降幅度及其对模型性能的传导），现有内容为趋势性描述。",
+        "resolution": null
+      },
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-76543019c6510884",
+        "section_id": "trends",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "medium",
+        "evidence_refs": [],
+        "requested_change": "缺少针对中国市场的趋势专项数据，现有证据中涉及中国的部分多来自全球报告的区域拆分或较早年份文献。",
+        "resolution": null
+      },
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-db7e9cd19757d2fa",
+        "section_id": "trends",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "medium",
+        "evidence_refs": [],
+        "requested_change": "缺少对“通用智能进展”类长期判断的反证条件与失败情景分析，相关表述多来自机构立场性展望。",
+        "resolution": null
+      },
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-86b36d82bfd05ff5",
+        "section_id": "trends",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "medium",
+        "evidence_refs": [],
+        "requested_change": "部分来源（如2019年求是网文章、2021年政策文本研究）时间较早，其趋势判断与当前技术状况存在时间落差，仅用于历史脉络印证。",
+        "resolution": null
+      }
+    ],
+    "supplement_queries": [],
+    "reason": "存在缺口，但没有可执行的补证查询",
+    "source": "deterministic_fallback",
+    "fallback_reason": "review_structured_output_invalid"
+  },
+  "document_result_ref": {
+    "draft_artifact": {
+      "schema_version": "1",
+      "artifact_id": "artifact-chapter-3463fac82b5bf591a088cbdfeb1f121c",
+      "run_id": "teach-20260930T071526421985Z",
+      "version": "1",
+      "kind": "chapter_markdown",
+      "mime_type": "text/markdown",
+      "size": 8046,
+      "hash": "0c207519985693480f754bf9e79ae35f2e57ccc2404d70efe1884a48c34ede23",
+      "access_ref": ".\\chapters\\trends\\v1.md",
+      "input_versions": {
+        "skill": "3c93f6be7b5d87f91edbfdbaf3078a530d36efb080edb9ee9c43945b9c49954b",
+        "outline": "1"
+      }
+    },
+    "citation_map_ref": ".\\chapters\\trends\\v1.citations.json",
+    "evidence_bundle_ref": ".\\evidence_bundles\\retrieval-teach-20260930T071526421985Z-trends-20260930T072130-c834bc4fada0.json"
+  },
+  "supplement_plan": null,
+  "revision_effect": null
+}

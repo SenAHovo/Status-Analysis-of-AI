@@ -1,0 +1,13 @@
+{
+  "schema_version": "1",
+  "source_id": "tavily-28c460efaafd-1",
+  "source_url": "https://paper.people.com.cn/rmlt/pc/content/202502/05/content_30059342.html",
+  "title": "我国生成式人工智能的发展现状与趋势",
+  "provider": "tavily",
+  "tool": "tavily_extract",
+  "extract_depth": "basic",
+  "content_format": "markdown",
+  "content_hash": "bf4770a64205d155ce3579bbbbc21a72dad2c29b9818852080ddcb531af214db",
+  "extract_ref": ".\\raw\\search\\query-b2879dfdc9a3dc7e.json",
+  "content_ref": ".\\raw\\pages\\page-7f91a427797ba240.md"
+}

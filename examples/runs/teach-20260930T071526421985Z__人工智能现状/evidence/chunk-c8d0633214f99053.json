@@ -1,0 +1,15 @@
+{
+  "schema_version": "1",
+  "chunk_id": "chunk-c8d0633214f99053",
+  "source_id": "tavily-7041b75ed906-2",
+  "text": "统交互复杂性（System interaction complexity）：模型在与多个其他AI系统存在复杂 交互的环境中运行，形成难以预测的涌现行为和反馈循环，系统间相互影响可能导致意外后 果和失控风险放大。 ●​ 应用场景不匹配（Application scenario mismatch）：模型被应用于与其设计能力不匹配 的场景，或在超出其安全运行参数的条件下使用，特别是将有限领域模型应用于需要广泛理 解和判断的复杂决策环境中。 46",
+  "title": "前沿人工智能风险管理框架(v1.0)",
+  "url": "https://concordia-ai.com/wp-content/uploads/2025/07/Frontier-AI-Ri[redacted].0-cn.pdf",
+  "provider": "tavily_mcp",
+  "position": 9,
+  "content_hash": "c8d0633214f990535c5d5c2eaa75f511b1f14564da77905cb6ae26ccb3339e1a",
+  "raw_ref": ".\\raw\\search\\query-8b9e08a22ca3d72d.json",
+  "content_ref": ".\\raw\\pages\\page-d92ba4e054c12121.md",
+  "created_at": "2026-09-30T07:22:48.515680Z",
+  "verification_status": "retrieved"
+}

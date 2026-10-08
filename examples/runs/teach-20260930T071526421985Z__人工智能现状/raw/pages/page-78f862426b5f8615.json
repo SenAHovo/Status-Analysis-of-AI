@@ -1,0 +1,13 @@
+{
+  "schema_version": "1",
+  "source_id": "tavily-28c460efaafd-5",
+  "source_url": "https://www.microsoft.com/en-us/research/articles/6-ai-trends-in-2025",
+  "title": "2025年六大AI趋势展望 - Microsoft Research",
+  "provider": "tavily",
+  "tool": "tavily_extract",
+  "extract_depth": "basic",
+  "content_format": "markdown",
+  "content_hash": "0330cfde54a964f51a98e7fa769564223cedd4ab5999eceaa9a20ff8edccccfa",
+  "extract_ref": ".\\raw\\search\\query-b2879dfdc9a3dc7e.json",
+  "content_ref": ".\\raw\\pages\\page-78f862426b5f8615.md"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1",
+  "outline_version": "1",
+  "sections": [
+    {
+      "schema_version": "1",
+      "section_id": "trends",
+      "title": "趋势",
+      "questions": [
+        "哪些变化具有持续性？",
+        "趋势判断由哪些证据和条件支持？",
+        "人工智能现状"
+      ],
+      "evidence_requirements": [
+        "趋势必须标明依据和不确定性；资料不足时降低判断强度，不把预测或主题性表述写成确定事实。"
+      ],
+      "dependencies": [
+        "background",
+        "current-status"
+      ],
+      "length_target": null
+    }
+  ]
+}

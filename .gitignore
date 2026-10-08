@@ -1,0 +1,26 @@
+.env
+.env.*
+!.env.example
+deepseekAPI.txt
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+/data/
+/outputs/
+/logs/
+/tmp/
+
+# 本地开发过程与交接档案；公开说明另行维护。
+/docs/adr/
+/docs/tasks/
+/docs/code_review*.md
+/docs/d01_verification.md
+/docs/development_status.md
+/docs/dpsk_work_log.md
+/docs/work_handoff.md
+/docs/comment.md

@@ -1,0 +1,1 @@
+"""AI status reporting application."""

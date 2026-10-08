@@ -1,0 +1,13 @@
+{
+  "schema_version": "1",
+  "source_id": "tavily-7041b75ed906-5",
+  "source_url": "https://www.kjjb.org/article/2026/1001-7348/2026-43-1-011.htm",
+  "title": "我国人工智能风险分级分类监管制度研究 ——域外比较与本土构建",
+  "provider": "tavily",
+  "tool": "tavily_extract",
+  "extract_depth": "basic",
+  "content_format": "markdown",
+  "content_hash": "96a604528ddbc69cf5c88179676bcfd7a1ca224d41b4ec92b086db7caca68e97",
+  "extract_ref": ".\\raw\\search\\query-8b9e08a22ca3d72d.json",
+  "content_ref": ".\\raw\\pages\\page-88495acaddaf6d5a.md"
+}

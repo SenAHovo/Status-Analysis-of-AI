@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "outline_version": "1",
+  "sections": [
+    {
+      "schema_version": "1",
+      "section_id": "background",
+      "title": "背景",
+      "questions": [
+        "为什么需要分析这一主题？",
+        "研究对象、时间范围和地域范围是什么？",
+        "人工智能现状"
+      ],
+      "evidence_requirements": [
+        "优先使用官方统计、政策文件、权威机构报告和可核验的历史资料；区分事实、预测和分析判断。"
+      ],
+      "dependencies": [],
+      "length_target": null
+    }
+  ]
+}

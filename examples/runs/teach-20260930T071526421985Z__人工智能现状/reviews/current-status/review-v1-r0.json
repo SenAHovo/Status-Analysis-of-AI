@@ -1,0 +1,100 @@
+{
+  "schema_version": "1",
+  "section_id": "current-status",
+  "draft_version": "1",
+  "decision": {
+    "schema_version": "1",
+    "decision": "deliver_with_limits",
+    "run_id": "teach-20260930T071526421985Z",
+    "section_id": "current-status",
+    "draft_version": "1",
+    "review_round": 0,
+    "issues": [
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-1f70605e6d5c7db2",
+        "section_id": "current-status",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "high",
+        "evidence_refs": [],
+        "requested_change": "缺少关于人工智能主要参与者（头部企业、研究机构）的系统对比资料，无法就全球产业格局、市场份额或竞争位次形成结论。",
+        "resolution": null
+      },
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-b689cee2e943ce55",
+        "section_id": "current-status",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "high",
+        "evidence_refs": [],
+        "requested_change": "缺少统一口径的全球人工智能市场规模、算力基础设施总量等量化数据，无法给出产业规模的连续序列。",
+        "resolution": null
+      },
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-ddbb206bf6e35982",
+        "section_id": "current-status",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "high",
+        "evidence_refs": [],
+        "requested_change": "缺少中国人工智能产业最新（2024—2025年）的权威统计，现有中国相关资料主要为2019年及更早的政策文本与评述。",
+        "resolution": null
+      },
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-46d2e8e224467eb5",
+        "section_id": "current-status",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "medium",
+        "evidence_refs": [],
+        "requested_change": "体育领域人工智能应用的具体数据与案例有限，仅能作为应用渗透的例证，不足以支撑跨行业普遍规律。",
+        "resolution": null
+      },
+      {
+        "schema_version": "1",
+        "issue_id": "review-gap-7863cd16cb9b597d",
+        "section_id": "current-status",
+        "draft_version": "1",
+        "location": "",
+        "type": "missing_evidence",
+        "severity": "medium",
+        "evidence_refs": [],
+        "requested_change": "治理与监管部分缺少中国2024—2025年最新政策进展的直接证据，相关判断主要依托全球性报告。",
+        "resolution": null
+      }
+    ],
+    "supplement_queries": [],
+    "reason": "存在缺口，但没有可执行的补证查询",
+    "source": "deterministic_fallback",
+    "fallback_reason": "review_structured_output_invalid"
+  },
+  "document_result_ref": {
+    "draft_artifact": {
+      "schema_version": "1",
+      "artifact_id": "artifact-chapter-5513c9802f8eb4a91caa7d1fdba2ac60",
+      "run_id": "teach-20260930T071526421985Z",
+      "version": "1",
+      "kind": "chapter_markdown",
+      "mime_type": "text/markdown",
+      "size": 10803,
+      "hash": "f7d4112a6819fe07fc0056f03bdd1f9885e26cb96b5f46d8bf4b8edb5194acf1",
+      "access_ref": ".\\chapters\\current-status\\v1.md",
+      "input_versions": {
+        "skill": "3c93f6be7b5d87f91edbfdbaf3078a530d36efb080edb9ee9c43945b9c49954b",
+        "outline": "1"
+      }
+    },
+    "citation_map_ref": ".\\chapters\\current-status\\v1.citations.json",
+    "evidence_bundle_ref": ".\\evidence_bundles\\retrieval-teach-20260930T071526421985Z-current-status-20260930T072010-530c58a1daa0.json"
+  },
+  "supplement_plan": null,
+  "revision_effect": null
+}

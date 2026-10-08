@@ -1,0 +1,198 @@
+{
+  "schema_version": "1",
+  "markdown_artifact": {
+    "schema_version": "1",
+    "artifact_id": "artifact-chapter-3463fac82b5bf591a088cbdfeb1f121c",
+    "run_id": "teach-20260930T071526421985Z",
+    "version": "1",
+    "kind": "chapter_markdown",
+    "mime_type": "text/markdown",
+    "size": 8046,
+    "hash": "0c207519985693480f754bf9e79ae35f2e57ccc2404d70efe1884a48c34ede23",
+    "access_ref": ".\\chapters\\trends\\v1.md",
+    "input_versions": {
+      "skill": "3c93f6be7b5d87f91edbfdbaf3078a530d36efb080edb9ee9c43945b9c49954b",
+      "outline": "1"
+    }
+  },
+  "citations": [
+    {
+      "number": 1,
+      "source_ids": [
+        "tavily-30c64c26ae63-2"
+      ],
+      "title": "介绍2025年人工智能指数报告 - Stanford HAI",
+      "url": "https://hai.stanford.edu/assets/files/hai_ai_index_report_2025_chinese_version_061325.pdf",
+      "raw_refs": [
+        ".\\raw\\search\\query-3d054d3e690b2af8.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-7400902f4f3f6833.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-72eb5d63c9dd9868:0",
+        "teach-20260930T071526421985Z:chunk-16532b08de94e199:1",
+        "teach-20260930T071526421985Z:chunk-72eb5d63c9dd9868:1",
+        "teach-20260930T071526421985Z:chunk-16532b08de94e199:0",
+        "teach-20260930T071526421985Z:chunk-35f37786f8452ded:2",
+        "teach-20260930T071526421985Z:chunk-6d7522ec9a0406f5:4",
+        "teach-20260930T071526421985Z:chunk-53492c1bc8fe0697:0",
+        "teach-20260930T071526421985Z:chunk-ab19ec71632935ce:3",
+        "teach-20260930T071526421985Z:chunk-e4880dadd46ca336:1",
+        "teach-20260930T071526421985Z:chunk-72eb5d63c9dd9868:2",
+        "teach-20260930T071526421985Z:chunk-9d84f36e0c8f2bda:1",
+        "teach-20260930T071526421985Z:chunk-6d7522ec9a0406f5:5",
+        "teach-20260930T071526421985Z:chunk-aa7c8e937780accb:6",
+        "teach-20260930T071526421985Z:chunk-16532b08de94e199:3",
+        "teach-20260930T071526421985Z:chunk-6d7522ec9a0406f5:6",
+        "teach-20260930T071526421985Z:chunk-5e74271d7424a44b:2",
+        "teach-20260930T071526421985Z:chunk-884748ac4a3c8f2e:1",
+        "teach-20260930T071526421985Z:chunk-5e74271d7424a44b:3",
+        "teach-20260930T071526421985Z:chunk-884748ac4a3c8f2e:3",
+        "teach-20260930T071526421985Z:chunk-3b8275590fdcfc02:6",
+        "teach-20260930T071526421985Z:chunk-8dc886204fc3b8cb:6"
+      ]
+    },
+    {
+      "number": 2,
+      "source_ids": [
+        "tavily-28c460efaafd-4"
+      ],
+      "title": "人工智能发展趋势及应对策略 | OpenAI",
+      "url": "https://openai.com/zh-Hans-CN/index/ai-progress-and-recommendations",
+      "raw_refs": [
+        ".\\raw\\search\\query-b2879dfdc9a3dc7e.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-250fd8e727e7bbd3.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-e68b7c70c2b388b8:0",
+        "teach-20260930T071526421985Z:chunk-e68b7c70c2b388b8:3"
+      ]
+    },
+    {
+      "number": 3,
+      "source_ids": [
+        "tavily-28c460efaafd-2"
+      ],
+      "title": "人工智能主要趋势 | IBM",
+      "url": "https://www.ibm.com/cn-zh/think/insights/artificial-intelligence-trends",
+      "raw_refs": [
+        ".\\raw\\search\\query-b2879dfdc9a3dc7e.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-9a7034ad8a2f0651.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-ec6f74df6361e1b2:0",
+        "teach-20260930T071526421985Z:chunk-ec6f74df6361e1b2:1",
+        "teach-20260930T071526421985Z:chunk-50ada875fde12823:1",
+        "teach-20260930T071526421985Z:chunk-50ada875fde12823:8"
+      ]
+    },
+    {
+      "number": 4,
+      "source_ids": [
+        "tavily-28c460efaafd-5"
+      ],
+      "title": "2025年六大AI趋势展望 - Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/articles/6-ai-trends-in-2025",
+      "raw_refs": [
+        ".\\raw\\search\\query-b2879dfdc9a3dc7e.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-78f862426b5f8615.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-a28c5704f8b663fc:0"
+      ]
+    },
+    {
+      "number": 5,
+      "source_ids": [
+        "tavily-fbf04878a66f-2"
+      ],
+      "title": "[PDF] 人工智能技术与体育应用的现状与发展",
+      "url": "https://www.sxsportsworld.com/rc-pub/front/front-article/download/97769777/lowqualitypdf/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%8A%80%E6%9C%AF%E4%B8%8E%E4%BD%93%E8%82%B2%E5%BA%94%E7%94%A8%E7%9A%84%E7%8E%B0%E7%8A%B6%E4%B8%8E%E5%8F%91%E5%B1%95.pdf",
+      "raw_refs": [
+        ".\\raw\\search\\query-4a6b2f6b5a65821c.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-4e9d859fc47bb491.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-af37601ef56d1e44:1",
+        "teach-20260930T071526421985Z:chunk-af37601ef56d1e44:3"
+      ]
+    }
+  ],
+  "evidence_gaps": [
+    {
+      "schema_version": "1",
+      "gap_id": "gap-e690f884ccabe858",
+      "kind": "evidence_limitation",
+      "severity": "hard",
+      "description": "缺少可核验的推理成本、单位智能成本时间序列原始数据与统一口径，现有“每年40倍降幅”“280倍下降”等数字来自不同机构与估算方法，无法直接比较或外推。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-926b42338518119d",
+      "kind": "evidence_limitation",
+      "severity": "hard",
+      "description": "缺少智能体从实验到正式运营的量化转化率、失败原因分布与时间跨度数据，落地节奏判断主要依赖机构定性观察。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-891dc800ec5ada6f",
+      "kind": "evidence_limitation",
+      "severity": "hard",
+      "description": "缺少数据使用限制对模型训练实际影响的量化证据（如数据规模、多样性下降幅度及其对模型性能的传导），现有内容为趋势性描述。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-76543019c6510884",
+      "kind": "evidence_limitation",
+      "severity": "soft",
+      "description": "缺少针对中国市场的趋势专项数据，现有证据中涉及中国的部分多来自全球报告的区域拆分或较早年份文献。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-db7e9cd19757d2fa",
+      "kind": "evidence_limitation",
+      "severity": "soft",
+      "description": "缺少对“通用智能进展”类长期判断的反证条件与失败情景分析，相关表述多来自机构立场性展望。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-86b36d82bfd05ff5",
+      "kind": "evidence_limitation",
+      "severity": "soft",
+      "description": "部分来源（如2019年求是网文章、2021年政策文本研究）时间较早，其趋势判断与当前技术状况存在时间落差，仅用于历史脉络印证。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    }
+  ]
+}

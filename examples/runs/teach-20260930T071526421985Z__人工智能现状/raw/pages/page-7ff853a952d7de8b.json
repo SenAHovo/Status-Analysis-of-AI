@@ -1,0 +1,13 @@
+{
+  "schema_version": "1",
+  "source_id": "tavily-30c64c26ae63-1",
+  "source_url": "https://www.qstheory.cn/dukan/qs/2019-02/16/c_1124114625.htm",
+  "title": "人工智能的历史、现状和未来 - 求是网",
+  "provider": "tavily",
+  "tool": "tavily_extract",
+  "extract_depth": "basic",
+  "content_format": "markdown",
+  "content_hash": "1804640bb40eb6132a33aba66d4c0b79a562a20c8aedbd20287d07c2938d4a04",
+  "extract_ref": ".\\raw\\search\\query-3d054d3e690b2af8.json",
+  "content_ref": ".\\raw\\pages\\page-7ff853a952d7de8b.md"
+}

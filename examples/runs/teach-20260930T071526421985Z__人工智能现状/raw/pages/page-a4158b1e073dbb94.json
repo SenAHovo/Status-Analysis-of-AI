@@ -1,0 +1,13 @@
+{
+  "schema_version": "1",
+  "source_id": "tavily-fbf04878a66f-1",
+  "source_url": "https://www.sogou.com/web?query=ai%E7%9B%AE%E5%89%8D%E5%8F%91%E5%B1%95%E5%88%B0%E4%BB%80%E4%B9%88%E7%A8%8B%E5%BA%A6%E4%BA%86&s_from=pc_wendaka&sessiontime=1773093791302",
+  "title": "ai目前发展到什么程度了 - 搜狗搜索",
+  "provider": "tavily",
+  "tool": "tavily_extract",
+  "extract_depth": "basic",
+  "content_format": "markdown",
+  "content_hash": "671598d716f7b826c523b19fb06ea34cab77ffc485cd8b467ca404102965d098",
+  "extract_ref": ".\\raw\\search\\query-4a6b2f6b5a65821c.json",
+  "content_ref": ".\\raw\\pages\\page-a4158b1e073dbb94.md"
+}

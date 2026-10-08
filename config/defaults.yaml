@@ -1,0 +1,17 @@
+# 非敏感业务默认值。真实凭证、路径与权限由 .env 和程序管理。
+# 本文件被 ai_status_report.briefing.defaults 读取并校验。
+schema_version: "1"
+timezone: Asia/Shanghai
+language: zh
+geography: global_with_china   # global_with_china / global / china
+audience: general              # general / student / academic / business
+length_min_words: 4000
+length_max_words: 6000
+report_structure:
+  - 背景
+  - 现状
+  - 趋势
+  - 建议
+output_format: pdf
+period_default_months: 12
+default_relative_expression: 最近十二个月

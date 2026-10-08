@@ -1,0 +1,164 @@
+{
+  "schema_version": "1",
+  "markdown_artifact": {
+    "schema_version": "1",
+    "artifact_id": "artifact-chapter-e9778b0d52079e40d5fa7516ed147a4a",
+    "run_id": "teach-20260930T071526421985Z",
+    "version": "1",
+    "kind": "chapter_markdown",
+    "mime_type": "text/markdown",
+    "size": 8486,
+    "hash": "d8c8b39b9f3d76f25f1c058d051a374544abed9bc4de9b3338a23d4d41aa57cb",
+    "access_ref": ".\\chapters\\background\\v1.md",
+    "input_versions": {
+      "skill": "3c93f6be7b5d87f91edbfdbaf3078a530d36efb080edb9ee9c43945b9c49954b",
+      "outline": "1"
+    }
+  },
+  "citations": [
+    {
+      "number": 1,
+      "source_ids": [
+        "tavily-30c64c26ae63-1"
+      ],
+      "title": "人工智能的历史、现状和未来 - 求是网",
+      "url": "https://www.qstheory.cn/dukan/qs/2019-02/16/c_1124114625.htm",
+      "raw_refs": [
+        ".\\raw\\search\\query-3d054d3e690b2af8.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-7ff853a952d7de8b.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:2",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:3",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:1",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:4",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:0",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:6",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:7",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:5",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:8",
+        "teach-20260930T071526421985Z:chunk-2d81ef3b17da13d4:0"
+      ]
+    },
+    {
+      "number": 2,
+      "source_ids": [
+        "tavily-30c64c26ae63-2"
+      ],
+      "title": "介绍2025年人工智能指数报告 - Stanford HAI",
+      "url": "https://hai.stanford.edu/assets/files/hai_ai_index_report_2025_chinese_version_061325.pdf",
+      "raw_refs": [
+        ".\\raw\\search\\query-3d054d3e690b2af8.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-7400902f4f3f6833.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-16532b08de94e199:0",
+        "teach-20260930T071526421985Z:chunk-5e74271d7424a44b:2",
+        "teach-20260930T071526421985Z:chunk-884748ac4a3c8f2e:1",
+        "teach-20260930T071526421985Z:chunk-ab19ec71632935ce:3",
+        "teach-20260930T071526421985Z:chunk-5e74271d7424a44b:3",
+        "teach-20260930T071526421985Z:chunk-884748ac4a3c8f2e:3",
+        "teach-20260930T071526421985Z:chunk-72eb5d63c9dd9868:0",
+        "teach-20260930T071526421985Z:chunk-72eb5d63c9dd9868:1",
+        "teach-20260930T071526421985Z:chunk-16532b08de94e199:1",
+        "teach-20260930T071526421985Z:chunk-3b8275590fdcfc02:6",
+        "teach-20260930T071526421985Z:chunk-8dc886204fc3b8cb:6",
+        "teach-20260930T071526421985Z:chunk-3b8275590fdcfc02:7",
+        "teach-20260930T071526421985Z:chunk-884748ac4a3c8f2e:2",
+        "teach-20260930T071526421985Z:chunk-aa7c8e937780accb:6",
+        "teach-20260930T071526421985Z:chunk-8ff0a4cd8c6f3f33:0",
+        "teach-20260930T071526421985Z:chunk-16532b08de94e199:2",
+        "teach-20260930T071526421985Z:chunk-e4880dadd46ca336:1",
+        "teach-20260930T071526421985Z:chunk-6d7522ec9a0406f5:4",
+        "teach-20260930T071526421985Z:chunk-49a39ef5703dcf4a:7",
+        "teach-20260930T071526421985Z:chunk-279917ee0ee1a8f8:3",
+        "teach-20260930T071526421985Z:chunk-72eb5d63c9dd9868:2",
+        "teach-20260930T071526421985Z:chunk-20f3b5d67982c790:5",
+        "teach-20260930T071526421985Z:chunk-35f37786f8452ded:2",
+        "teach-20260930T071526421985Z:chunk-16532b08de94e199:4",
+        "teach-20260930T071526421985Z:chunk-9d84f36e0c8f2bda:1",
+        "teach-20260930T071526421985Z:chunk-8f7d53c1be6f3dc1:4",
+        "teach-20260930T071526421985Z:chunk-72eb5d63c9dd9868:5",
+        "teach-20260930T071526421985Z:chunk-ab19ec71632935ce:0",
+        "teach-20260930T071526421985Z:chunk-c538858203717004:5",
+        "teach-20260930T071526421985Z:chunk-5a825abc1d62d8dc:2",
+        "teach-20260930T071526421985Z:chunk-8dc886204fc3b8cb:5",
+        "teach-20260930T071526421985Z:chunk-47d85fddff454479:5",
+        "teach-20260930T071526421985Z:chunk-49a39ef5703dcf4a:4",
+        "teach-20260930T071526421985Z:chunk-53492c1bc8fe0697:0",
+        "teach-20260930T071526421985Z:chunk-72eb5d63c9dd9868:7"
+      ]
+    },
+    {
+      "number": 3,
+      "source_ids": [
+        "tavily-30c64c26ae63-3"
+      ],
+      "title": "我国人工智能政策文本量化研究 ——政策现状与前沿趋势",
+      "url": "https://www.kjjb.org/fileup/HTML/2021-38-15-015.htm",
+      "raw_refs": [
+        ".\\raw\\search\\query-3d054d3e690b2af8.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-3b1dd41da33efa1c.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-02177772a227b065:0",
+        "teach-20260930T071526421985Z:chunk-39cc706d39f1ea8a:4",
+        "teach-20260930T071526421985Z:chunk-c3ac3fd4b2b9411a:7",
+        "teach-20260930T071526421985Z:chunk-02177772a227b065:1",
+        "teach-20260930T071526421985Z:chunk-c3ac3fd4b2b9411a:4"
+      ]
+    }
+  ],
+  "evidence_gaps": [
+    {
+      "schema_version": "1",
+      "gap_id": "gap-ce3c43f9a3ede0d0",
+      "kind": "evidence_limitation",
+      "severity": "hard",
+      "description": "缺少中国人工智能产业规模、企业数量、投融资规模等官方统计数据在2020年之后的更新，现有中国产业数据主要来自2019年之前的评述。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-cb96976d40a14020",
+      "kind": "evidence_limitation",
+      "severity": "hard",
+      "description": "缺少欧盟《人工智能法案》的正式文本条款细节及生效时间表，仅有指数报告对其监管框架的概述。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-4a00351a277fbeb2",
+      "kind": "evidence_limitation",
+      "severity": "soft",
+      "description": "各来源对“人工智能”的统计口径（论文、专利、模型、企业应用）定义不一致，无法在本章内完成统一口径的量化比较。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-0964b665a3d5e161",
+      "kind": "evidence_limitation",
+      "severity": "soft",
+      "description": "缺少2024年之后中国人工智能政策的最新系统性梳理，政策文本量化研究的样本截至2020年。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "schema_version": "1",
+  "query": "人工智能现状 趋势 哪些变化具有持续性？ 趋势判断由哪些证据和条件支持？",
+  "provider": "tavily_mcp",
+  "providers": [
+    "tavily_mcp"
+  ],
+  "plan_id": "plan-20260930T070851-1ff5d7a2edcc",
+  "plan_source": "model_cache",
+  "summary": "本次检索围绕“人工智能现状、趋势及哪些变化具有持续性、趋势判断由哪些证据和条件支持”展开，来源涵盖人民日报、IBM、IDC、OpenAI 与微软亚洲研究院，均标记为 retrieved 状态。综合可见：主要趋势集中在模型能力与推理提升、单位智能成本与推理成本大幅下降、智能体（AI agent）自主性增强并走向落地、生成式 AI 使用率快速上升，以及模型从实验转向实际应用。证据边界在于：现有片段多为宏观趋势综述与行业观察，缺少可核验的量化口径、时间序列与反证条件，部分判断带有机构自身立场。",
+  "key_findings": [
+    {
+      "schema_version": "1",
+      "finding_id": "finding-1",
+      "claim": "AI 模型能力与推理能力持续增强，前沿模型可承担更广泛任务",
+      "explanation": "微软亚洲研究院指出过去一年 AI 模型变得更快更高效，前沿模型可完成写作到编码等广泛任务，具备高级推理能力的模型能解决复杂问题并应用于科学、编程、数学、法律和医学；IBM 也将“更合理的推理模型”列为2025年上半年推动性趋势。",
+      "source_ids": [
+        "tavily-28c460efaafd-5",
+        "tavily-28c460efaafd-2"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "schema_version": "1",
+      "finding_id": "finding-2",
+      "claim": "单位智能成本与推理成本大幅下降",
+      "explanation": "OpenAI 称过去几年单位智能成本每年约有 40 倍降幅；IBM 将“大幅降低推理成本”列为2025年上半年已出现的主要趋势。两者共同支持成本下降这一持续性变化。",
+      "source_ids": [
+        "tavily-28c460efaafd-4",
+        "tavily-28c460efaafd-2"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "schema_version": "1",
+      "finding_id": "finding-3",
+      "claim": "AI 智能体自主性与落地应用成为趋势主线",
+      "explanation": "微软亚洲研究院指出 AI 驱动的代理将拥有更高自主性执行更多任务，商业领袖和 AI 决策者对生成式 AI 的使用率从55%激增至75%，并称正从 AI 实验转向实际落地；IDC 亦将智能体列为医疗等领域新增长极。",
+      "source_ids": [
+        "tavily-28c460efaafd-5",
+        "tavily-28c460efaafd-3"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "schema_version": "1",
+      "finding_id": "finding-4",
+      "claim": "生成式 AI 从实验走向规模化落地，落地能力成为竞争焦点",
+      "explanation": "微软亚洲研究院提到组织从 AI 实验转向有实际意义的落地应用；IDC 关于金融生成式 AI 的报道指出端到端落地能力决定胜负，医院核心业务系统中智能体、本土替代等改造需求稳步释放。",
+      "source_ids": [
+        "tavily-28c460efaafd-5",
+        "tavily-28c460efaafd-3"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "schema_version": "1",
+      "finding_id": "finding-5",
+      "claim": "AI 能力提升与实际社会影响之间存在时间差",
+      "explanation": "OpenAI 指出尽管图灵测试已被跨越、系统能力显著提升，但日常生活几乎无明显变化，大众使用方式与系统当前能力之间存在巨大鸿沟，社会生活惯性更强；微软亚洲研究院也强调这是技术全面转型的开始。",
+      "source_ids": [
+        "tavily-28c460efaafd-4",
+        "tavily-28c460efaafd-5"
+      ],
+      "confidence": 0.65
+    }
+  ],
+  "status": "partial",
+  "incomplete_reason": "empty_summary",
+  "sources": [
+    {
+      "schema_version": "1",
+      "source_id": "tavily-28c460efaafd-1",
+      "provider": "tavily_mcp",
+      "title": "我国生成式人工智能的发展现状与趋势",
+      "url": "https://paper.people.com.cn/rmlt/pc/content/202502/05/content_30059342.html",
+      "snippet": "![](../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/logo.png)\n![](../../../pic/202502/05/e4627095-999d-46fa-b146-f2a4e567e19d.jpg.2)\n\n习近平新时代中国特色社会主义思想研究\n\n人民论坛 2025年02月05日 Wed\n\n![](../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/down.png)\n\n![](../../../../../../testx/template/amucsite/projectPaper/rmPaper/files/down.png)\n\n|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | | |  |  |  |  |  |  |  |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | | |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | |  |  |  |  |  |  |  | | | | | | | | | **日** | **一** | **二** | **三** | **四** | **五** | **六** | | |\n| [关闭](#) |\n\n|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- | -",
+      "published_at": null,
+      "retrieved_at": "2026-09-30T07:20:43.779147Z",
+      "raw_ref": ".\\raw\\search\\query-c954a017d3cbffd1.json",
+      "content_ref": ".\\raw\\pages\\page-7f91a427797ba240.md",
+      "verification_status": "retrieved"
+    },
+    {
+      "schema_version": "1",
+      "source_id": "tavily-28c460efaafd-2",
+      "provider": "tavily_mcp",
+      "title": "人工智能主要趋势 | IBM",
+      "url": "https://www.ibm.com/cn-zh/think/insights/artificial-intelligence-trends",
+      "snippet": "# 2025 年的 AI 趋势：回顾与展望\n\n![一位戴着眼镜、沉思中的老人将未来主义城市景观与数字数据可视化效果融为一体](https://assets.ibm.com/is/image/ibm/adobestock_1264894090?ts=1746854969531&dpr=off)\n\n[Dave Bergmann](https://www.ibm.com/think/author/dave-bergmann.html) \n\nSenior Staff Writer, AI Models\n\nIBM Think\n\n值此 2025 年行至年中之际，我们可以回顾本年度迄今主导的人工智能趋势，并展望未来半年可能出现的进展。\n\n鉴于 AI 发展的广度和深度，任何关于 AI 趋势的总结都不可能做到详尽无遗。这篇文章也不例外。我们将范围缩小到一个包括 10 项内容的清单：5 项发展推动了今年上半年的发展，另外 5 项发展我们预计在未来几个月内将发挥重要作用。\n\n##### 到目前为止我们所看到的：\n\n* *大幅降低推理成本*\n* *更合理的推理模型*\n* *数字资源日益枯竭*\n* *混合专家 (MoE) 模型回归*\n* *AI 行动落后于 AI 宏大愿景*\n\n##### **接下来我们将了解：**\n\n* *基准饱和与多样化*\n* *超越转换器模型*\n* *具身人工智能、机器人技术与世界模型*\n* *隐私与个性化*\n* *AI 同事和情感后果*\n\nAI 的发展趋势不仅来自 AI 模型与算法本身的进步，更源于[生成式 AI](https://www.ibm.com/cn-zh/think/topics/generative-ai) 能力所应用的、不断扩展的用例范围。随着模型变得能力更强、用途更广、效率更高，它们所赋能的 AI 应用程序、工具及其他 AI 驱动的工作流也同步发展。因此，要真正理解当今 AI 生态系统的演进，需结合背景理解[机器学习](https://www.ibm.com/cn-zh/think/topics/machine-learning)突破的因果关联。\n\n本文主要探讨其现实影响可能在数月内显现的持续趋势：换言之，即主要在 2025 年期间产生切实影响的趋势。当然，也存在其他更具长期性和广为人知的 AI 计划。例如，尽管近期在个别区域出现了全自动驾驶汽车的进展——美国少数城市启动了机器人出租车试点，并在奥斯陆、日内瓦及中国 16 个城市开展了海外试验——但它们真正普及可能仍需数年时间。\n\nAI 领域的许多其他重要宏观趋势，如 [AI 智能体](https://www.ibm.com/cn-zh/think/ai-agents)的出现，或 [AI 对搜索行为和 SEO 的破坏](https://www.ibm.com/cn-zh/think/news/",
+      "published_at": null,
+      "retrieved_at": "2026-09-30T07:20:43.779147Z",
+      "raw_ref": ".\\raw\\search\\query-c954a017d3cbffd1.json",
+      "content_ref": ".\\raw\\pages\\page-9a7034ad8a2f0651.md",
+      "verification_status": "retrieved"
+    },
+    {
+      "schema_version": "1",
+      "source_id": "tavily-28c460efaafd-3",
+      "provider": "tavily_mcp",
+      "title": "China Archives - Page 5 of 17 - IDC",
+      "url": "https://www.idc.com/resource-center/blog/resource-region/3_337/page/5",
+      "snippet": "[Skip to main](#primary) [Skip to search](#search-toggle) [Skip to footer](#colophon)\n\n\n[![Logo](https://www.idc.com/wp-content/uploads/2024/12/IDC_LOGO_Header_White_Color-88f3a08a441ed3a46a858b1c08a159ee.svg)](/)\n\n[Become a Client](https://info.idc.com/become-a-client.html)\n\n[Become a Client](https://info.idc.com/become-a-client.html)\n\n# Resource Regions: China\n\nPredictions   Jul 20, 2026  Erin Lin\n\n## [IDC最新报告：医院核心业务系统市场规模破100亿大关，智能体与医共体成为“十五五”时期新增长极](https://www.idc.com/resource-center/press-releases/%e5%8c%bb%e9%99%a2%e6%a0%b8%e5%bf%83%e4%b8%9a%e5%8a%a1%e7%b3%bb%e7%bb%9f%e5%b8%82%e5%9c%ba%e8%a7%84%e6%a8%a1%e7%a0%b4100%e4%ba%bf%e5%a4%a7%e5%85%b3%ef%bc%8c%e6%99%ba%e8%83%bd%e4%bd%93%e4%b8%8e/)\n\n2025年国内医院核心业务系统市场的智能体、医共体、本土替代的改造需求将稳步释放，成为新的增长极。头部厂商相继完成云原生底座迭代与医疗大模型原生融合布局，AI 智能体、全域数据治理、全栈信创持续迭代，未来市场的竞争将更加聚焦于技术深度与、服务运营与生态协同能力的综合较量。\n\n [Read full release](https://www.idc.com/resource-center/press-releases/%e5%8c%bb%e9%99%a2%e6%a0%b8%e5%bf%83%e4%b8%9a%e5%8a%a1%e7%b3%bb%e7%bb%9f%e5%b8%82%e5%9c%ba%e8%a7%84%e6%a8%a1%e7%a0%b4100%e4%ba%bf%e5%a4%a7%e5%85%b3%ef%bc%8c%e6%99%ba%e8%83%bd%e4%bd%93%e4%b8%8e/)\n\nMarketing   Jul 20, 2026  Siri Si\n\n## [IDC最新报告：揭秘金融生成式AI规模化卡点，端到端落地能力决定胜负](https://www.id",
+      "published_at": null,
+      "retrieved_at": "2026-09-30T07:20:43.779147Z",
+      "raw_ref": ".\\raw\\search\\query-c954a017d3cbffd1.json",
+      "content_ref": ".\\raw\\pages\\page-778823b8d2095384.md",
+      "verification_status": "retrieved"
+    },
+    {
+      "schema_version": "1",
+      "source_id": "tavily-28c460efaafd-4",
+      "provider": "tavily_mcp",
+      "title": "人工智能发展趋势及应对策略 | OpenAI",
+      "url": "https://openai.com/zh-Hans-CN/index/ai-progress-and-recommendations",
+      "snippet": "2025年11月6日\n\n# 人工智能发展趋势及应对策略\n\n人工智能正在不断解锁新的知识与能力。如何引导这股力量，使其造福社会并产生广泛而持久的影响，已成为摆在我们面前的重要责任。\n\n当大众对图灵测试的理解被迅速超越时，许多人惊讶地发现，日常生活几乎没有因此发生明显变化。这个里程碑曾被讨论了几十年 — 它曾经看似十分遥远，后来突然变得触手可及，再后来我们竟已跨越了它。我们确实迎来了令人瞩目的新产品，但世界并没有因此彻底改写。尽管计算机如今能够进行对话并思考复杂问题，社会的运转依旧延续着原有的节奏。\n\n在全球范围内，许多人仍将人工智能视为聊天机器人，或更高效的搜索工具。然而，今天的系统已经能够在一些最具挑战性的智力竞赛中超越最聪明的人类。尽管人工智能系统仍表现不稳定，并存在显著弱点，但在人工智能研究人员看来，那些能够解决复杂问题的系统似乎已经完成了 80% 的旅程，而不是仅仅停留在 20% 的位置。大众日常使用人工智能的方式，与人工智能当前所具备的能力之间，存在着巨大的鸿沟。\n\n能够自主发现新知识，或帮助人类更高效地探索知识的人工智能系统，极有可能在未来对世界产生深远影响。\n\n短短几年间，人工智能在软件工程领域的能力实现了跨越式提升：从只能处理人类几秒钟即可完成的任务，发展到能够胜任人类需一小时以上才能完成的工作。我们预计，不久之后，人工智能系统将能够完成人类需耗时数天甚至数周的任务。而对于那些需要人类花费数百年的工作，人工智能将如何应对，尚难以想象。\n\n与此同时，单位智能的成本也在急剧下降。过去几年里，每年约有 40 倍的降幅，这一趋势颇为惊人！\n\n展望未来，我们认为，到 2026 年人工智能有望取得初步成果；至 2028 年及以后，亦有望实现更具意义的突破。尽管仍存在不确定性，我们的研究进展表明这一方向值得期待。\n\n长期以来，人们发现人工智能的发展往往充满惊喜，而社会也会以自己的方式与技术共同演化。即便未来几年人工智能能力预计将迅速提升，我们认为，日常生活将保持相对稳定。毕竟，即使工具再强大，社会生活方式的惯性更为强大。\n\n尤其值得期待的是，未来或将为人类开辟更优的新路径，以实现有意义的人生，并让更多人得以享受这种生活。诚然，工作的形态将会发生变化，经济转型在某些方面可能十分艰难，甚至不排除社会经济契约需要重新调整。但在一个资源均衡分配、富足共享的世界里，人们的生活质量有望显著提升。\n\n人工智能系统将在多个领域发挥作用：帮助人们更好地了解自身健康，加速材料科学、药物研发和气候建模等领域的进展，并为全球学生带来更多个性化教育的机会。展示这些切实的效益，有助于形成一种共同愿景：人工智能不仅能让生活更高效，还能让生活变得更美好。\n\nOpenAI 强调[其对安全的坚定承诺⁠](https://openai.com/safety/how-we-think-about-",
+      "published_at": null,
+      "retrieved_at": "2026-09-30T07:20:43.780137Z",
+      "raw_ref": ".\\raw\\search\\query-c954a017d3cbffd1.json",
+      "content_ref": ".\\raw\\pages\\page-250fd8e727e7bbd3.md",
+      "verification_status": "retrieved"
+    },
+    {
+      "schema_version": "1",
+      "source_id": "tavily-28c460efaafd-5",
+      "provider": "tavily_mcp",
+      "title": "2025年六大AI趋势展望 - Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/articles/6-ai-trends-in-2025",
+      "snippet": "![Microsoft](https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png)\n![a tall building lit up at night](https://www.microsoft.com/en-us/research/wp-content/uploads/1998/02/asia-banner2.jpg)\n\n## 微软亚洲研究院\n\n# 2025年六大AI趋势展望\n\n已发布 \n2024年12月17日\n\n分享这个页面\n\n![2025年六大AI趋势展望](https://www.microsoft.com/en-us/research/wp-content/uploads/2024/12/6-ai-trends-in-2025-1024x576.jpg)\n\n随着2025年的临近，人工智能正逐步从辅助工具演变为工作与生活中不可或缺的伙伴。AI 驱动的代理（agent）将拥有更高的自主性来执行更多任务，从而提升人们的生活质量。人工智能在记忆与推理能力上的创新，也将助力人类社会寻找应对气候变化、医疗健康等重大挑战的新方法。而微软始终致力于帮助人们安全、可靠地构建与使用人工智能。\n\n“人工智能已经将不可能变为可能，过去一年我们看到众多个人和组织从 AI 实验转向了更多有实际意义的落地应用，”微软业务发展、战略和风险投资执行副总裁 Chris Young 表示，“这是技术全面转型的开始，它将改变我们生活的方方面面。”\n\n仅在过去一年中，商业领袖和 AI 决策者对生成式人工智能的使用率就从55%激增至75%。新的人工智能工具预示着巨大的潜力。那么未来还将发生什么？以下是2025年值得关注的六大 AI 趋势，以及微软将在每个趋势上进行的创新方向。\n\n![AI模型将变得更强大且更有用](https://www.microsoft.com/en-us/research/wp-content/uploads/2024/12/6-ai-trends-in-2025-1-1024x576.jpg)\n\n在过去的一年里，AI 模型变得更快、更高效。如今，大规模的“前沿模型”已经可以完成从写作到编码的广泛任务，高度专业化的模型还可以为特定任务或行业进行量身定制。\n\n到2025年，AI 模型将能做得更多、更好。像 OpenAI o1 这样具备高级推理能力的模型已经能够解决一些复杂问题，其逻辑步骤类似于人类在回答难题前的分析过程。这些能力将在科学、编程、数学、法律和医学等领域继续发挥作用，使模型能够比较合同、生成代码以及执行多步骤工作流程。\n\n这些进步在模型创新中至关重要，但数据管理和后训练（post-training）的进步同样重要。例如，微软的小语言模型 Phi 系列表明，管理高质量的数据可以提升模型性能与推理能力。微软的",
+      "published_at": null,
+      "retrieved_at": "2026-09-30T07:20:43.780137Z",
+      "raw_ref": ".\\raw\\search\\query-c954a017d3cbffd1.json",
+      "content_ref": ".\\raw\\pages\\page-78f862426b5f8615.md",
+      "verification_status": "retrieved"
+    }
+  ],
+  "evidence_refs": [
+    "chunk-87a5fcf0d01b47f9",
+    "chunk-632d7f11b237e89d",
+    "chunk-90e5725a53bf029d",
+    "chunk-bf420a17acc80f79",
+    "chunk-ec6f74df6361e1b2",
+    "chunk-50ada875fde12823",
+    "chunk-27ca1f1dcf911186",
+    "chunk-b00b6d17e781a7aa",
+    "chunk-8b3d870d44663c5e",
+    "chunk-349c27aa4906dba7",
+    "chunk-356a1adb22049e40",
+    "chunk-e68b7c70c2b388b8",
+    "chunk-a28c5704f8b663fc"
+  ],
+  "raw_ref": "",
+  "raw_refs": [
+    ".\\raw\\search\\query-c954a017d3cbffd1.json",
+    ".\\raw\\search\\query-b2879dfdc9a3dc7e.json"
+  ],
+  "gaps": [
+    "provider_partial",
+    "provider_required_for_retrievable_evidence",
+    "现有来源多为趋势综述与机构观点，缺少可核验的量化口径、时间序列数据与统计方法说明，难以独立验证趋势持续性。",
+    "趋势判断多来自 AI 企业（OpenAI、微软、IBM）自身立场，可能存在利益相关偏差，缺少中立第三方或反方证据。",
+    "人民日报《我国生成式人工智能的发展现状与趋势》正文片段缺失，无法提取其具体结论。",
+    "IDC 来源片段日期标注为2026年，与2025年趋势主题存在时间错位，证据时效性需进一步确认。",
+    "关于“哪些变化具有持续性”的判断条件（如技术、成本、政策、需求侧条件）在现有片段中未被系统展开论证。"
+  ]
+}

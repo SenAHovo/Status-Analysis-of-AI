@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "outline_version": "1",
+  "sections": [
+    {
+      "schema_version": "1",
+      "section_id": "current-status",
+      "title": "现状",
+      "questions": [
+        "当前发展到什么程度？",
+        "主要参与者、应用和约束是什么？",
+        "人工智能现状"
+      ],
+      "evidence_requirements": [
+        "优先采用最新可获得的事实资料；不同统计口径不得拼接为连续序列，个案不得写成行业普遍规律。"
+      ],
+      "dependencies": [],
+      "length_target": null
+    }
+  ]
+}

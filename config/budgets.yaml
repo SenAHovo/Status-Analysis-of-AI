@@ -1,0 +1,41 @@
+# 教学演示预算。凭证和服务地址不放在此文件。
+schema_version: "1"
+ledger:
+  capacities:
+    run: 3000000
+    window: 128000
+    output: 64000
+    search_requests: 60
+    retrieval_requests: 120
+
+models:
+  deepseek-v4-flash:
+    context_window_tokens: 1000000
+    max_output_tokens: 384000
+  deepseek-v4-pro:
+    context_window_tokens: 1000000
+    max_output_tokens: 384000
+
+tasks:
+  document_write:
+    evidence_tokens: 800000
+    reserved_input_tokens: 32000
+    max_output_tokens: 64000
+  document_revision:
+    evidence_tokens: 800000
+    reserved_input_tokens: 32000
+    max_output_tokens: 64000
+  evidence_review:
+    max_output_tokens: 4096
+  search_planning:
+    max_output_tokens: 512
+  search_synthesis:
+    max_output_tokens: 4096
+  search_execution:
+    max_output_tokens: 65536
+  intent_routing:
+    max_output_tokens: 96
+  report_title:
+    max_output_tokens: 64
+  token_probe:
+    max_output_tokens: 32

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1",
+  "source_id": "tavily-7041b75ed906-4",
+  "source_url": "https://docs.cloud.google.com/agent-assist/docs/ai-coach-best-practices?hl=zh-cn",
+  "title": "AI 教练：最佳实践  |  Agent Assist  |  Google Cloud Documentation",
+  "provider": "tavily",
+  "tool": "tavily_extract",
+  "extract_depth": "basic",
+  "content_format": "markdown",
+  "content_hash": "fb8098f93af5f32b4611e4fd978b27f103f42d1943ed8c9e82f93bbd4a688c0e",
+  "extract_ref": ".\\raw\\search\\query-8b9e08a22ca3d72d.json",
+  "content_ref": ".\\raw\\pages\\page-b16e06936cc013b3.md"
+}

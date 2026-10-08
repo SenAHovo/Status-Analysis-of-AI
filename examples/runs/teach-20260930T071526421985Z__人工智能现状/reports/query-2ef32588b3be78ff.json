@@ -1,0 +1,244 @@
+{
+  "schema_version": "1",
+  "query": "人工智能现状 背景 为什么需要分析这一主题？ 研究对象、时间范围和地域范围是什么？",
+  "provider": "tavily_mcp",
+  "providers": [
+    "tavily_mcp"
+  ],
+  "plan_id": "plan-20260930T064837-689fac85afae",
+  "plan_source": "model_cache",
+  "summary": "本次检索围绕“人工智能现状”的背景、研究必要性及研究对象、时间和地域范围展开。来源包括求是网2019年关于人工智能历史与现状的评述、斯坦福HAI《2025年人工智能指数报告》中文版介绍、我国人工智能政策文本量化研究、人工智能对社会科学研究影响的报道，以及欧盟《人工智能法案》指南。这些来源显示：人工智能被视为推动新一轮科技革命和产业变革的战略性技术，各国政府将其作为提升国家竞争力和维护国家安全的重大战略；全球人工智能技术、投资、应用和治理持续推进；中国、欧盟等不同地域在政策与监管层面各有侧重。证据在时间上跨越2019年至2026年（含前瞻性发布时间），地域上覆盖全球、中国和欧盟，但各来源主题侧重不同，部分来源仅为摘要或导言级片段，对具体时间范围和地域范围的界定并不完全一致。",
+  "key_findings": [
+    {
+      "schema_version": "1",
+      "finding_id": "finding-1",
+      "claim": "人工智能被视为推动人类进入智能时代、引领新一轮科技革命和产业变革的决定性力量，世界主要发达国家将其发展作为提升国家竞争力和维护国家安全的重大战略。",
+      "explanation": "求是网文章指出，人工智能正成为推动人类进入智能时代的决定性力量，全球产业界纷纷转型布局人工智能创新生态，世界主要发达国家均把发展人工智能作为提升国家竞争力、维护国家安全的重大战略。",
+      "source_ids": [
+        "tavily-30c64c26ae63-1"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "schema_version": "1",
+      "finding_id": "finding-2",
+      "claim": "人工智能学科自1956年达特茅斯会议提出概念后诞生，其研究目标是开发能够模拟、延伸和扩展人类智能的理论、方法、技术及应用系统。",
+      "explanation": "来源记载，1956年夏麦卡锡、明斯基等科学家在美国达特茅斯学院开会研讨机器模拟人的智能，首次提出“人工智能”概念，标志该学科诞生；并定义人工智能为研究开发能够模拟、延伸和扩展人类智能的技术科学。",
+      "source_ids": [
+        "tavily-30c64c26ae63-1"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "schema_version": "1",
+      "finding_id": "finding-3",
+      "claim": "2024年人工智能在科研认可、技术能力与商业应用方面均取得显著进展，高性能、低成本和开源模型普及推动其可及性和影响力扩大，企业对人工智能投资在短暂放缓后出现反弹。",
+      "explanation": "斯坦福HAI《2025年人工智能指数报告》介绍提到，2024年诺贝尔物理学奖、化学奖及图灵奖体现了对人工智能推动知识进步的认可；图灵测试已不再被视为雄心勃勃的目标；人工智能应用以前所未有速度渗透社会生活，企业人工智能投资反弹，生成式人工智能初创企业融资案例数量增加近三倍，商业应用显著增长。",
+      "source_ids": [
+        "tavily-30c64c26ae63-2"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "schema_version": "1",
+      "finding_id": "finding-4",
+      "claim": "人工智能指数报告旨在跨时间、跨地域地跟踪人工智能的发展、应用和影响，为政策制定者、媒体、高管、研究人员和公众提供经过验证的全球来源数据。",
+      "explanation": "该来源说明人工智能指数报告发起于2017年，作为“人工智能百年研究”项目分支，使命是帮助利益相关方就人工智能的发展和部署做出更明智决策，并提供独立、数据驱动的跨时间和跨地域视角。",
+      "source_ids": [
+        "tavily-30c64c26ae63-2"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "schema_version": "1",
+      "finding_id": "finding-5",
+      "claim": "我国人工智能政策文本量化研究发现，需求型政策工具需进一步加强，环境型政策工具结构有待调整。",
+      "explanation": "该研究以我国公布的30份人工智能政策文本为样本，基于政策工具和PMC政策评价模型进行量化分析，发现需求型政策工具需进一步加强，环境型政策工具结构有待调整，并识别出影响政策文本评价等级的具体变量。",
+      "source_ids": [
+        "tavily-30c64c26ae63-3"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "schema_version": "1",
+      "finding_id": "finding-6",
+      "claim": "生成式人工智能尤其是大语言模型正深刻改变社会科学研究，不仅迭代研究工具，也丰富研究议题与研究对象。",
+      "explanation": "中国科技网报道指出，近年来人工智能尤其是以大语言模型为代表的生成式人工智能以前所未有速度改变社会生活方方面面；对社会科学研究而言，这不仅意味着研究工具迭代，也进一步丰富了研究议题与研究对象，大语言模型逐渐被引入社会科学研究方法体系。",
+      "source_ids": [
+        "tavily-30c64c26ae63-4"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "schema_version": "1",
+      "finding_id": "finding-7",
+      "claim": "欧盟《人工智能法案》具有域外效力，适用于在欧盟使用其输出的人工智能系统提供者或部署者，但不适用于第三国公共部门、特定国际组织及军事防御或国家安全目的的系统。",
+      "explanation": "欧盟人工智能法案指南说明，该法案适用具有域外效力，无论提供者是否在欧盟内设立或位于第三国，许多规定都适用；外国供应商须在欧盟内指定授权代表；法案不适用于第三国公共部门或与欧盟签订警察和司法合作协议的国际组织，也不适用于为军事防御或国家安全目的投放市场的人工智能系统。",
+      "source_ids": [
+        "tavily-30c64c26ae63-5"
+      ],
+      "confidence": 0.85
+    }
+  ],
+  "status": "partial",
+  "incomplete_reason": "empty_summary",
+  "sources": [
+    {
+      "schema_version": "1",
+      "source_id": "tavily-30c64c26ae63-1",
+      "provider": "tavily_mcp",
+      "title": "人工智能的历史、现状和未来 - 求是网",
+      "url": "https://www.qstheory.cn/dukan/qs/2019-02/16/c_1124114625.htm",
+      "snippet": "![](//www.qstheory.cn/n6/images/zt_weixin_share.png)\n\n[![](//www.qstheory.cn/n7/images/v7_qsdd_20171208_08.png)](//www.qstheory.cn)\n\n[求是网首页](//www.qstheory.cn) | [网站地图](//www.qstheory.cn/sitemap/)\n\n# 人工智能的历史、现状和未来\n\n 来源：《求是》2019/04   作者：谭铁牛   2019-02-16 09:00:00 \n\n2018年2月25日，在平昌冬奥会闭幕式“北京8分钟”表演中，由沈阳新松机器人自动化股份有限公司研发的智能移动机器人与轮滑演员进行表演。 新华社记者 李钢/摄\n\n　　2018年5月3日，中国科学院发布国内首款云端人工智能芯片，理论峰值速度达每秒128万亿次定点运算，达到世界先进水平。 新华社记者 金立旺/摄\n\n　　2017年10月，在沙特阿拉伯首都利雅得举行的“未来投资倡议”大会上，机器人索菲亚被授予沙特公民身份，她也因此成为全球首个获得公民身份的机器人。图为2018年7月10日，在香港会展中心，机器人索菲亚亮相主舞台。 ISAAC LAWRENCE/视觉中国\n\n　　2018年11月22日， 在“伟大的变革——庆祝改革开放40周年大型展览”上，第三代国产骨科手术机器人“天玑”正在模拟做手术，它是国际上首个适应症覆盖脊柱全节段和骨盆髋臼手术的骨科机器人，性能指标达到国际领先水平。 麦田/视觉中国\n\n　　如同蒸汽时代的蒸汽机、电气时代的发电机、信息时代的计算机和互联网，人工智能正成为推动人类进入智能时代的决定性力量。全球产业界充分认识到人工智能技术引领新一轮产业变革的重大意义，纷纷转型发展，抢滩布局人工智能创新生态。世界主要发达国家均把发展人工智能作为提升国家竞争力、维护国家安全的重大战略，力图在国际科技竞争中掌握主导权。习近平总书记在十九届中央政治局第九次集体学习时深刻指出，加快发展新一代人工智能是事关我国能否抓住新一轮科技革命和产业变革机遇的战略问题。错失一个机遇，就有可能错过整整一个时代。新一轮科技革命与产业变革已曙光可见，在这场关乎前途命运的大赛场上，我们必须抢抓机遇、奋起直追、力争超越。\n\n**概念与历程**\n\n　　了解人工智能向何处去，首先要知道人工智能从何处来。1956年夏，麦卡锡、明斯基等科学家在美国达特茅斯学院开会研讨“如何用机器模拟人的智能”，首次提出“人工智能（Artificial Intelligence，简称AI）”这一概念，标志着人工智能学科的诞生。\n\n　　人工智能是研究开发能够模拟、延伸和扩展人类智能的理论、方法、技术及应用系统的一门新的技术科学，研究目的是促使智能机器会听（语音识别、机器翻译等）、会看（图像识别、",
+      "published_at": null,
+      "retrieved_at": "2026-09-30T07:15:34.779148Z",
+      "raw_ref": ".\\raw\\search\\query-386f4d25a4e0d1be.json",
+      "content_ref": ".\\raw\\pages\\page-7ff853a952d7de8b.md",
+      "verification_status": "retrieved"
+    },
+    {
+      "schema_version": "1",
+      "source_id": "tavily-30c64c26ae63-2",
+      "provider": "tavily_mcp",
+      "title": "介绍2025年人工智能指数报告 - Stanford HAI",
+      "url": "https://hai.stanford.edu/assets/files/hai_ai_index_report_2025_chinese_version_061325.pdf",
+      "snippet": "2025年人工智能 指数报告 介绍 2025年人工智能指数报告 欢迎阅读第八版人工智能指数报告。恰逢人工智能对社会、经济和全球治理的影响不断加强的关键时期，我们在这一重要时 刻发布了 2025 年人工智能指数报告。它也是我们迄今为止发布过的最全面的指数。今年的报告新增了对人工智能硬件发展状况 的深入分析、对推理成本的新估算，以及对人工智能论文发表和专利申请趋势的新分析。我们还首次披露了企业采用负责任的人 工智能实践的最新数据，并扩展了人工智能在科学和医学领域日益重要的作用的分析维度。 发起于 2017 年，作为 “人工智能百年研究（One Hundred Year Study of Artiﬁcial Intelligence） ” 项目分支，人工智能指 数报告一直致力于为政策制定者、新闻工作者、高管、研究人员和公众提供准确、经过严格验证和全球来源的数据。我们的使命 始终如一：帮助这些利益相关方就人工智能的发展和部署做出更明智的决策。在这个从会议室到厨房餐桌到处都在讨论人工智能 的世界里，这一使命显得尤为重要。 从地缘政治格局的变化和底层技术的快速发展，到人工智能在商业、决策和公共生活中不断扩大的作用，人工智能指数持续 引领行业关键趋势的追踪与解读。纵向追踪始终是我们的核心任务。在这一高速发展的领域，本报告提供了重要的背景信息： 帮助我们了解人工智能的现状、发展历程以及未来走向。 作为全球公认的人工智能领域权威资源之一，人工智能指数报告被《纽约时报》 、彭博社和《卫报》等主要媒体引用，成为 数百篇学术论文的文献参考，并服务于世界各地的政策制定者和政府机构。我们已经向埃森哲、IBM、富国银行和富达等公司提 供了人工智能现状的简报，并将继续为全球人工智能生态系统输送独立见解。 1 2025年人工智能 指数报告 联合主任致辞 随着人工智能持续重塑人类生活、企业界和公共话语体系，人工智能指数报告始终跟踪其进展情况，通过独立的、数据驱动 的视角，跨时间、跨地域地全方位观察人工智能的发展、应用和影响。 对于人工智能来说，2024 年是多么美好的一年。诺贝尔物理学奖和化学奖，以及因强化学习方面的奠基性工作而获得的图 灵奖，都体现了人们对人工智能在推动人类知识进步方面所起作用的认可。曾经令人望而生畏的图灵测试已不再被视为一个雄心 勃勃的目标，今天的精尖系统已经超越了它。与此同时，人工智能的应用正以前所未有的速度渗透社会生活，数以百万计的人们 在专业工作和休闲活动中高频使用人工智能。 随着高性能、 低成本和开源模型的普及， 人工智能的可及性和影响力必将进一步扩大。 在经历了短暂的放缓之后，企业对人工智能的投资出现反弹。生成式人工智能初创企业融资案例数量增加了近三倍。商业应用在 经过多年的低迷后于2024 年迎来显著增长。人工智能已从边缘领域成为业务价值的核心驱动力。 各国政府",
+      "published_at": null,
+      "retrieved_at": "2026-09-30T07:15:34.779148Z",
+      "raw_ref": ".\\raw\\search\\query-386f4d25a4e0d1be.json",
+      "content_ref": ".\\raw\\pages\\page-7400902f4f3f6833.md",
+      "verification_status": "retrieved"
+    },
+    {
+      "schema_version": "1",
+      "source_id": "tavily-30c64c26ae63-3",
+      "provider": "tavily_mcp",
+      "title": "我国人工智能政策文本量化研究 ——政策现状与前沿趋势",
+      "url": "https://www.kjjb.org/fileup/HTML/2021-38-15-015.htm",
+      "snippet": "# 我国人工智能政策文本量化研究 ——政策现状与前沿趋势\n\n臧 维，张延法，徐 磊\n\n(北京工业大学 经济与管理学院，北京 100124)\n\n摘 要：以我国公布的30份人工智能政策文本为样本，基于政策工具和PMC政策评价模型，采用文本挖掘及内容分析法，对我国当前人工智能政策文本进行量化分析。结果发现，我国人工智能政策中的需求型政策工具需进一步加强，环境型政策工具结构有待调整；通过对处于不同评价等级、针对不同产业发展政策文本的PMC指数进行比较，识别出影响我国人工智能政策文本评价等级的具体变量。最后，结合我国人工智能研究前沿趋势分析，探寻未来政策制定方向，为后续人工智能政策的制定和修改提供具体、可操作性建议。\n\n关键词：人工智能；文本挖掘；政策工具；政策评价；PMC模型\n\n# Quantitative Research on Artificial Intelligence Policy Text in China ——Policy Status Quo and Frontier Trends\n\nZang Wei，Zhang Yanfa，Xu Lei\n\n(School of Economic and Management，Beijing University of Technology，Beijing 100124，China)\n\nAbstract：In this paper, 30 artificial intelligence policy texts published in China are taken as samples. Based on policy tools and PMC policy evaluation model, text mining and content analysis are adopted to conduct quantitative analysis on the current artificial intelligence industrial policy texts in China. It is found that demand-type policy tools of artificial intelligence industrial policy in China need to be further strengthened, and the structure of environment-type policy tools needs to be adjusted scientifically. Through comparative analysis of PMC indexes of policy texts at different evaluation levels and aimi",
+      "published_at": null,
+      "retrieved_at": "2026-09-30T07:15:34.779148Z",
+      "raw_ref": ".\\raw\\search\\query-386f4d25a4e0d1be.json",
+      "content_ref": ".\\raw\\pages\\page-3b1dd41da33efa1c.md",
+      "verification_status": "retrieved"
+    },
+    {
+      "schema_version": "1",
+      "source_id": "tavily-30c64c26ae63-4",
+      "provider": "tavily_mcp",
+      "title": "人工智能对社会科学研究影响深远",
+      "url": "https://www.stdaily.com/web/gdxw/2025-06/20/content_358102.html",
+      "snippet": "![](https://www.stdaily.com/resource/kjw/img/wx.jpeg)\n\n[![](/resource/kjw/img/logo.png)](/)\n\n* [时政](https://www.stdaily.com/web/szxw/node_357.html)\n* [热点](https://www.stdaily.com/web/rdxw/node_327.html)\n* [政务](https://www.stdaily.com/web/zwxw/node_362.html)\n* [深瞳](https://www.stdaily.com/web/stbd/node_434.html)\n* [访谈](https://www.stdaily.com/web/fangtan/node_441.html)\n* [视频](https://www.stdaily.com/web/spxw/node_701.html)\n* [国际](https://www.stdaily.com/web/gjxw/node_381.html)\n* [地方](https://www.stdaily.com/web/dfxw/node_368.html)\n* [专题](https://www.stdaily.com/web/ztxw/node_335.html)\n* [English](https://www.stdaily.com/web/English/index.html)\n* [滚动](https://www.stdaily.com/web/gdxw/node_324.html)\n\n所在位置： [中国科技网首页](https://www.stdaily.com/index.html) > [滚动](https://www.stdaily.com/web/gdxw/node_324.html) > 正文\n\n# 人工智能对社会科学研究影响深远\n\n2025-06-20 19:45:50 来源:   点击数：\n\n**杨 锋**\n\n      习近平总书记在中共中央政治局第二十次集体学习时指出，人工智能作为引领新一轮科技革命和产业变革的战略性技术，深刻改变人类生产生活方式。他进一步强调，以人工智能引领科研范式变革，加速各领域科技创新突破。这一系列讲话为社会科学顺应人工智能浪潮、拓展研究路径提供了重要指引。\n\n　　近年来，人工智能尤其是以大语言模型为代表的生成式人工智能，正以前所未有的速度深刻改变社会生活的方方面面。对于社会科学研究而言，这不仅意味着研究工具的迭代，也进一步丰富了研究议题与研究对象。\n\n**人工智能重塑社会科学研究方法**\n\n　　近年来，大语言模型逐渐被引入社会科学研究方法体系。凭借对自然语言与人类行为的模拟能力，这类工具不仅可降低研究成本，还拓",
+      "published_at": null,
+      "retrieved_at": "2026-09-30T07:15:34.779148Z",
+      "raw_ref": ".\\raw\\search\\query-386f4d25a4e0d1be.json",
+      "content_ref": ".\\raw\\pages\\page-9ce8094b4baa2076.md",
+      "verification_status": "retrieved"
+    },
+    {
+      "schema_version": "1",
+      "source_id": "tavily-30c64c26ae63-5",
+      "provider": "tavily_mcp",
+      "title": "欧盟人工智能法案： 指南",
+      "url": "https://www.twobirds.com/-/media/new-website-content/pdfs/capabilities/artificial-intelligence/eu-ai-act-guide-chinese-version.pdf",
+      "snippet": "1 欧盟人工智能法案： 指南 2026年2月 2 1 2 3 4 5 6 7 8 9 10 内容 概述、关键概念和实施时间 概述 关键概念 时间线 通用人工智能模型 通用人工智能模型的背景及相关性 术语与通用人工智能价值链 通用人工智能模型提供者的义务 具有系统性风险的通用人工智能模型 透明度义务 一般透明度义务 高风险人工智能系统的透明度义务 国家层面的透明度义务和行为准则 与其他监管框架的关系 人工智能监管沙盒 人工智能监管沙盒 人工智能系统的真实世界测试 执法和治理 概述 上市后义务 市场监管机构 执法程序 基本权利保障机构 通用人工智能模型 处罚 对第三方的救济 治理 《人工智能法案》：未来走向 《人工智能法案》：未来走向 授权法案 执行法案 欧盟委员会指引 行为准则和实践准则 标准 实质范围和地域范围 实质范围 地域范围 适用例外 与其他监管框架的关系 禁止人工智能实践 禁止人工智能实践 禁止性规定的适用主体 执行与罚款 高风险人工智能系统 高风险人工智能系统的类别 高风险人工智能系统提供者的义务 高风险人工智能系统提供者的协调标准和符合性评 估程序 高风险人工智能系统部署者的义务 高风险人工智能系统其他运营者的义务 1 5 6 7 8 9 2 3 4 第一级别 法律500强 人工智能 以客户满意度著称 人工智能指南撰稿人 10 3 1 2 3 4 5 6 7 8 9 10 概述、关键概念和实施时间 概述 欧盟（EU）是人工智能（AI）监管领域的先驱，其 积极主动的举措为全球树立了标杆，确保人工智能 发展合乎伦理和责任的标准。事实上，我们可能会 见证一种新的布鲁塞尔效应（Brussels effect），类似 于GDPR（《通用数据保护条例》）的影响力。欧盟 的全面而审慎的框架优先强调透明度、问责制和人 权。 《人工智能法案》（AI Act）的适用具有域外效 力——无论提供者是否在欧盟内设立或位于第三 国，许多规定都适用。《人工智能法案》适用于任 何负责部署人工智能系统的提供者或实体，前提 是“该系统产生的输出计划在欧盟使用”。外国供 应商必须在欧盟内指定一名授权代表，以确保其遵 守该法案的规定。但是，《人工智能法案》不适用 于第三国的公共部门或与欧盟签订了警察和司法 合作协议的国际组织，也不适用于为军事防御或国 家安全目的投放市场的人工智能系统。这一广泛的 范围旨在确保对人工智能系统及其使用进行全面监 管。 虽然《人工智能法案》具有开创意义，却也给众多 在欧盟境内提供和部署人工智能系统的机构带来了 显著复杂性。批评者指出，该法案中规定的某些义 务在实践中难以落实且成本高昂，义务内容复杂， 协调标准等关键配套要素的时间表不明确，行政负 担更可能阻碍欧洲的创新与竞争力。 2025年11月，欧盟委员会发布《数字综合法案》提 案，针对《人工智能法案》的部",
+      "published_at": null,
+      "retrieved_at": "2026-09-30T07:15:34.779148Z",
+      "raw_ref": ".\\raw\\search\\query-386f4d25a4e0d1be.json",
+      "content_ref": ".\\raw\\pages\\page-c16204000ea8f413.md",
+      "verification_status": "retrieved"
+    }
+  ],
+  "evidence_refs": [
+    "chunk-c8ea4d6666220489",
+    "chunk-2d81ef3b17da13d4",
+    "chunk-16532b08de94e199",
+    "chunk-3b8275590fdcfc02",
+    "chunk-ab19ec71632935ce",
+    "chunk-72eb5d63c9dd9868",
+    "chunk-279917ee0ee1a8f8",
+    "chunk-0198b16a8588e3d3",
+    "chunk-1cb39589153542ca",
+    "chunk-38c95d86967510c1",
+    "chunk-bed923f238e5cbcf",
+    "chunk-884748ac4a3c8f2e",
+    "chunk-5e74271d7424a44b",
+    "chunk-5a825abc1d62d8dc",
+    "chunk-38688d040f54acfe",
+    "chunk-554e36a725e5e629",
+    "chunk-15c2f88c6641ef07",
+    "chunk-c538858203717004",
+    "chunk-5ace9c0a5470c1d0",
+    "chunk-acba56cae887a029",
+    "chunk-9d84f36e0c8f2bda",
+    "chunk-81c2739c071bf5a8",
+    "chunk-20f3b5d67982c790",
+    "chunk-53492c1bc8fe0697",
+    "chunk-86fb1e4c5893cbf7",
+    "chunk-47d85fddff454479",
+    "chunk-35f37786f8452ded",
+    "chunk-8ff0a4cd8c6f3f33",
+    "chunk-59a72ec9ed140944",
+    "chunk-abd5fee461d71649",
+    "chunk-3e195a8b454ae365",
+    "chunk-52eea0b0dcfb5842",
+    "chunk-3168324f8df5598d",
+    "chunk-246a5f9a6d5a37fd",
+    "chunk-802126946189908c",
+    "chunk-22338d6833b8ee80",
+    "chunk-e7c561f809be437a",
+    "chunk-1fa3b7cfad01f980",
+    "chunk-c4465306a14585ae",
+    "chunk-49a39ef5703dcf4a",
+    "chunk-0c33aac74696c043",
+    "chunk-88c376b41ccc194a",
+    "chunk-8dc886204fc3b8cb",
+    "chunk-e4880dadd46ca336",
+    "chunk-6d7522ec9a0406f5",
+    "chunk-f65ecb348d74f0f2",
+    "chunk-8f7d53c1be6f3dc1",
+    "chunk-93bcbba2bb1a1213",
+    "chunk-5689241cbcadc303",
+    "chunk-53c6715910b758b8",
+    "chunk-b3764705c8421d67",
+    "chunk-7731f535e555b1c0",
+    "chunk-438f05d579c452e8",
+    "chunk-aa7c8e937780accb",
+    "chunk-d0ca5dbc2e9a3be2",
+    "chunk-d367c49af6586fcc",
+    "chunk-5279fa7da50df2a2",
+    "chunk-b1d5f79daf51ae5a",
+    "chunk-b0c77cef7fec9dc0",
+    "chunk-c3ac3fd4b2b9411a",
+    "chunk-02177772a227b065",
+    "chunk-39cc706d39f1ea8a",
+    "chunk-9368bd3832c4e986",
+    "chunk-99203b331cefbfb3",
+    "chunk-a21e8a6b71a9f286",
+    "chunk-15c6582c12378253",
+    "chunk-a988588a8f1479ae",
+    "chunk-7f9baa8611af11aa",
+    "chunk-7b19e375b04d7e82",
+    "chunk-8c6a0dd67d337e2f",
+    "chunk-e662301ab3c00af6",
+    "chunk-19571bec72b2585c",
+    "chunk-d223f5922037a8e9",
+    "chunk-04b1d24d2f28dcc4",
+    "chunk-e443174921a8ca19",
+    "chunk-04746849e388be9e",
+    "chunk-557361d089a48ad6"
+  ],
+  "raw_ref": "",
+  "raw_refs": [
+    ".\\raw\\search\\query-386f4d25a4e0d1be.json",
+    ".\\raw\\search\\query-3d054d3e690b2af8.json"
+  ],
+  "gaps": [
+    "provider_partial",
+    "现有来源对“人工智能现状”的时间范围界定不一致：求是网文章主要反映2019年前后的背景，斯坦福HAI报告覆盖至2025年发布、内容涉及2024年数据，欧盟法案指南标注为2026年2月，我国政策文本量化研究的样本时间范围在片段中未明确。",
+    "地域范围方面，来源分别覆盖全球视角（斯坦福HAI报告、求是网）、中国（政策文本量化研究、社会科学研究报道）和欧盟（人工智能法案指南），但缺少对非洲、拉美等地区的现状证据，难以形成完整的全球地域覆盖。",
+    "关于“为什么需要分析这一主题”的直接论证，现有来源多从战略意义、科研影响或政策必要性角度间接提及，缺少对分析人工智能现状这一研究命题本身必要性、研究对象边界和方法论的系统论述。",
+    "部分来源仅提供摘要、导言或目录级片段，例如我国人工智能政策文本量化研究和欧盟人工智能法案指南，其具体数据、时间线和地域适用范围细节不足以支撑更细粒度的结论。",
+    "各来源的发布时间跨度较大，存在时效性差异，无法仅凭现有片段判断当前（2026年前后）人工智能现状的最新完整图景。"
+  ]
+}

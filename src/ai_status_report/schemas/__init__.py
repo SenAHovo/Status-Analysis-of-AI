@@ -1,0 +1,126 @@
+"""Internal business contracts (schemas package).
+
+These are the project's own typed payloads, separate from A2A protocol
+objects. SDK types are referenced directly where protocol semantics apply;
+project fields never masquerade as standard protocol fields.
+"""
+
+from ai_status_report.schemas.common import (
+    SCHEMA_VERSION,
+    ProjectModel,
+    new_id,
+    next_version,
+    validate_version,
+)
+from ai_status_report.schemas.dialogue import (
+    DEFAULT_PREFERENCES,
+    OTHER_OPTION,
+    PREFERENCE_OPTION_LABELS,
+    DialogueModelOutput,
+    PreferenceField,
+    PreferenceQuestion,
+    PreferenceSelection,
+    ReportStartRequest,
+    SectionBrief,
+    SessionStatus,
+    SessionSummary,
+    option_label,
+)
+from ai_status_report.schemas.document import (
+    DocumentBudget,
+    DocumentReviseSectionTask,
+    DocumentSectionResult,
+    DocumentWriteSectionTask,
+    EvidenceGap,
+    RecentSectionSummary,
+)
+from ai_status_report.schemas.evidence import EvidenceBundle, Excerpt
+from ai_status_report.schemas.report import (
+    ArtifactRef,
+    Outline,
+    OutlineSection,
+    ReviewIssue,
+    SectionResult,
+)
+from ai_status_report.schemas.research import (
+    DEFAULT_LENGTH_RANGE,
+    DEFAULT_WRITING_STYLE,
+    DefaultedField,
+    Geoscope,
+    LengthTarget,
+    OriginKind,
+    PeriodSpec,
+    ReaderStyle,
+    ResearchBrief,
+    ResearchJob,
+    WritingStyle,
+)
+from ai_status_report.schemas.review import EvidenceReviewOutput, ReviewDecision
+from ai_status_report.schemas.search import (
+    EvidenceChunk,
+    ResearchFinding,
+    ResearchReport,
+    ResearchSource,
+    ResearchSynthesis,
+    SearchLimits,
+    SearchPlan,
+    SearchQuery,
+    SearchRouteDecision,
+    SearchSourceRequirements,
+)
+
+__all__ = [
+    "DEFAULT_LENGTH_RANGE",
+    "DEFAULT_PREFERENCES",
+    "DEFAULT_WRITING_STYLE",
+    "OTHER_OPTION",
+    "PREFERENCE_OPTION_LABELS",
+    "SCHEMA_VERSION",
+    "ArtifactRef",
+    "DefaultedField",
+    "DialogueModelOutput",
+    "DocumentBudget",
+    "DocumentReviseSectionTask",
+    "DocumentSectionResult",
+    "DocumentWriteSectionTask",
+    "EvidenceBundle",
+    "EvidenceChunk",
+    "EvidenceGap",
+    "EvidenceReviewOutput",
+    "Excerpt",
+    "Geoscope",
+    "LengthTarget",
+    "OriginKind",
+    "Outline",
+    "OutlineSection",
+    "PeriodSpec",
+    "PreferenceField",
+    "PreferenceQuestion",
+    "PreferenceSelection",
+    "ProjectModel",
+    "ReaderStyle",
+    "RecentSectionSummary",
+    "ReportStartRequest",
+    "ResearchBrief",
+    "ResearchFinding",
+    "ResearchJob",
+    "ResearchReport",
+    "ResearchSource",
+    "ResearchSynthesis",
+    "ReviewDecision",
+    "ReviewIssue",
+    "SearchLimits",
+    "SearchPlan",
+    "SearchQuery",
+    "SearchRouteDecision",
+    "SearchSourceRequirements",
+    "SectionBrief",
+    "SectionResult",
+    "SessionStatus",
+    "SessionSummary",
+    "WritingStyle",
+    "new_id",
+    "next_version",
+    "option_label",
+    "validate_version",
+]

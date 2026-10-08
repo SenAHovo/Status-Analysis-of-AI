@@ -1,0 +1,24 @@
+{
+  "schema_version": "1",
+  "outline_version": "1",
+  "sections": [
+    {
+      "schema_version": "1",
+      "section_id": "recommendations",
+      "title": "建议",
+      "questions": [
+        "管理者或实践者应关注什么？",
+        "建议的适用条件、优先级和风险是什么？",
+        "人工智能现状"
+      ],
+      "evidence_requirements": [
+        "建议应能追溯到前文事实、趋势或限制；无法由资料直接证明的内容应明确作为分析建议，而非事实结论。"
+      ],
+      "dependencies": [
+        "current-status",
+        "trends"
+      ],
+      "length_target": null
+    }
+  ]
+}

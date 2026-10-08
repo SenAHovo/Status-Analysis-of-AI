@@ -1,0 +1,1 @@
+"""Generation provider adapters."""

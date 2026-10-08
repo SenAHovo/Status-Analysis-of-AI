@@ -1,0 +1,164 @@
+{
+  "schema_version": "1",
+  "markdown_artifact": {
+    "schema_version": "1",
+    "artifact_id": "artifact-chapter-5513c9802f8eb4a91caa7d1fdba2ac60",
+    "run_id": "teach-20260930T071526421985Z",
+    "version": "1",
+    "kind": "chapter_markdown",
+    "mime_type": "text/markdown",
+    "size": 10803,
+    "hash": "f7d4112a6819fe07fc0056f03bdd1f9885e26cb96b5f46d8bf4b8edb5194acf1",
+    "access_ref": ".\\chapters\\current-status\\v1.md",
+    "input_versions": {
+      "skill": "3c93f6be7b5d87f91edbfdbaf3078a530d36efb080edb9ee9c43945b9c49954b",
+      "outline": "1"
+    }
+  },
+  "citations": [
+    {
+      "number": 1,
+      "source_ids": [
+        "tavily-30c64c26ae63-1"
+      ],
+      "title": "人工智能的历史、现状和未来 - 求是网",
+      "url": "https://www.qstheory.cn/dukan/qs/2019-02/16/c_1124114625.htm",
+      "raw_refs": [
+        ".\\raw\\search\\query-3d054d3e690b2af8.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-7ff853a952d7de8b.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:2",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:1",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:4",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:3",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:5",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:7",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:6",
+        "teach-20260930T071526421985Z:chunk-2d81ef3b17da13d4:0",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:0",
+        "teach-20260930T071526421985Z:chunk-c8ea4d6666220489:8"
+      ]
+    },
+    {
+      "number": 2,
+      "source_ids": [
+        "tavily-fbf04878a66f-2"
+      ],
+      "title": "[PDF] 人工智能技术与体育应用的现状与发展",
+      "url": "https://www.sxsportsworld.com/rc-pub/front/front-article/download/97769777/lowqualitypdf/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%8A%80%E6%9C%AF%E4%B8%8E%E4%BD%93%E8%82%B2%E5%BA%94%E7%94%A8%E7%9A%84%E7%8E%B0%E7%8A%B6%E4%B8%8E%E5%8F%91%E5%B1%95.pdf",
+      "raw_refs": [
+        ".\\raw\\search\\query-4a6b2f6b5a65821c.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-4e9d859fc47bb491.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-af37601ef56d1e44:2",
+        "teach-20260930T071526421985Z:chunk-af37601ef56d1e44:1",
+        "teach-20260930T071526421985Z:chunk-af37601ef56d1e44:3"
+      ]
+    },
+    {
+      "number": 3,
+      "source_ids": [
+        "tavily-30c64c26ae63-2"
+      ],
+      "title": "介绍2025年人工智能指数报告 - Stanford HAI",
+      "url": "https://hai.stanford.edu/assets/files/hai_ai_index_report_2025_chinese_version_061325.pdf",
+      "raw_refs": [
+        ".\\raw\\search\\query-3d054d3e690b2af8.json"
+      ],
+      "content_refs": [
+        ".\\raw\\pages\\page-7400902f4f3f6833.md"
+      ],
+      "supporting_chunk_ids": [
+        "teach-20260930T071526421985Z:chunk-16532b08de94e199:1",
+        "teach-20260930T071526421985Z:chunk-16532b08de94e199:0",
+        "teach-20260930T071526421985Z:chunk-ab19ec71632935ce:0",
+        "teach-20260930T071526421985Z:chunk-9d84f36e0c8f2bda:1",
+        "teach-20260930T071526421985Z:chunk-3b8275590fdcfc02:7",
+        "teach-20260930T071526421985Z:chunk-ab19ec71632935ce:3",
+        "teach-20260930T071526421985Z:chunk-72eb5d63c9dd9868:1",
+        "teach-20260930T071526421985Z:chunk-53492c1bc8fe0697:0",
+        "teach-20260930T071526421985Z:chunk-e4880dadd46ca336:1",
+        "teach-20260930T071526421985Z:chunk-884748ac4a3c8f2e:3",
+        "teach-20260930T071526421985Z:chunk-16532b08de94e199:2",
+        "teach-20260930T071526421985Z:chunk-5e74271d7424a44b:3",
+        "teach-20260930T071526421985Z:chunk-6d7522ec9a0406f5:3",
+        "teach-20260930T071526421985Z:chunk-53492c1bc8fe0697:1",
+        "teach-20260930T071526421985Z:chunk-5e74271d7424a44b:2",
+        "teach-20260930T071526421985Z:chunk-c4465306a14585ae:4",
+        "teach-20260930T071526421985Z:chunk-72eb5d63c9dd9868:0",
+        "teach-20260930T071526421985Z:chunk-6d7522ec9a0406f5:4",
+        "teach-20260930T071526421985Z:chunk-acba56cae887a029:2",
+        "teach-20260930T071526421985Z:chunk-35f37786f8452ded:2",
+        "teach-20260930T071526421985Z:chunk-884748ac4a3c8f2e:1",
+        "teach-20260930T071526421985Z:chunk-3b8275590fdcfc02:6",
+        "teach-20260930T071526421985Z:chunk-8dc886204fc3b8cb:6",
+        "teach-20260930T071526421985Z:chunk-884748ac4a3c8f2e:2",
+        "teach-20260930T071526421985Z:chunk-aa7c8e937780accb:6",
+        "teach-20260930T071526421985Z:chunk-8ff0a4cd8c6f3f33:0"
+      ]
+    }
+  ],
+  "evidence_gaps": [
+    {
+      "schema_version": "1",
+      "gap_id": "gap-1f70605e6d5c7db2",
+      "kind": "evidence_limitation",
+      "severity": "hard",
+      "description": "缺少关于人工智能主要参与者（头部企业、研究机构）的系统对比资料，无法就全球产业格局、市场份额或竞争位次形成结论。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-b689cee2e943ce55",
+      "kind": "evidence_limitation",
+      "severity": "hard",
+      "description": "缺少统一口径的全球人工智能市场规模、算力基础设施总量等量化数据，无法给出产业规模的连续序列。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-ddbb206bf6e35982",
+      "kind": "evidence_limitation",
+      "severity": "hard",
+      "description": "缺少中国人工智能产业最新（2024—2025年）的权威统计，现有中国相关资料主要为2019年及更早的政策文本与评述。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-46d2e8e224467eb5",
+      "kind": "evidence_limitation",
+      "severity": "soft",
+      "description": "体育领域人工智能应用的具体数据与案例有限，仅能作为应用渗透的例证，不足以支撑跨行业普遍规律。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    },
+    {
+      "schema_version": "1",
+      "gap_id": "gap-7863cd16cb9b597d",
+      "kind": "evidence_limitation",
+      "severity": "soft",
+      "description": "治理与监管部分缺少中国2024—2025年最新政策进展的直接证据，相关判断主要依托全球性报告。",
+      "preferred_source_types": [],
+      "suggested_queries": [],
+      "resolution_status": "open",
+      "attempt_count": 0
+    }
+  ]
+}
