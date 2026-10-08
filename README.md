@@ -16,25 +16,11 @@
 
 ## 任务链
 
-```text
-用户输入
-  │
-  ▼
-主控：意图识别、偏好补充、四章调度
-  │                 │
-  │ A2A             │ A2A
-  ▼                 ▼
-网络搜索 Agent ──► 证据块 ──► Embedding + Chroma
-                                      │
-                                      ▼
-                            文档 Agent：按章检索与写作
-                                      │
-                                      ▼
-                         主控：审核、补证、修订、组装
-                                      │
-                                      ▼
-                           Markdown 报告 + PDF 报告
-```
+![任务链概览：A2A 协作、证据组织与审核修订回环](assets/task-chain-overview.png)
+
+任务从报告请求与偏好出发，由主控完成意图解析和四章编排；网络搜索 Agent、证据索引和文档 Agent 依次完成研究、检索与写作。审核发现缺口或修订建议时，会触发定向补证和章节修订，再回到同一审核口径，最终组装并导出 Markdown 与 PDF 报告。
+
+可编辑源图：[task-chain-overview.vsdx](assets/task-chain-overview.vsdx)。
 
 ## 环境要求
 
