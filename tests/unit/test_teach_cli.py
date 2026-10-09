@@ -1,3 +1,4 @@
+import json
 import sys
 from types import SimpleNamespace
 from typing import ClassVar
@@ -5,6 +6,9 @@ from typing import ClassVar
 from ai_status_report import cli
 from ai_status_report.cli import run_teaching_session
 from ai_status_report.rag.chroma import RagIndexError
+from ai_status_report.storage.search_results import register_run_directory, run_directory
+from ai_status_report.token_budget import RUN, BudgetLimits
+from ai_status_report.token_budget.runtime import PersistentTokenLedger
 
 
 class FakeManager:
@@ -170,6 +174,340 @@ def test_teaching_session_marks_non_pdf_terminal_phase_as_incomplete(tmp_path):
 
     assert result["status"] == "incomplete"
     assert any("[未完成] 阶段：search_failed" in line for line in output)
+
+
+def test_teaching_dialogue_ledger_promotes_into_the_labeled_report_run(tmp_path):
+    session_root = tmp_path / "data" / "teaching_sessions" / "session-1"
+    ledger = PersistentTokenLedger(
+        "teach-ledger",
+        session_root / "dialogue_token_usage.json",
+        limits=BudgetLimits(),
+    )
+    reservation = ledger.reserve(RUN, 20)
+    ledger.settle(reservation, 12)
+    run_root = register_run_directory(tmp_path, "teach-ledger", "人工智能现状")
+
+    destination = cli._promote_teaching_dialogue_ledger(ledger, run_directory_path=run_root)
+
+    assert destination == run_root / "token_usage.json"
+    assert json.loads(destination.read_text(encoding="utf-8"))["actual"] == {RUN: 12}
+    assert run_directory(tmp_path, "teach-ledger") == run_root
+    assert not ledger.path.exists()
+    assert not ledger.lock_path.exists()
+
+
+def test_teaching_session_accounts_model_dialogue_in_the_report_ledger(monkeypatch, tmp_path):
+    output = []
+    ledgers = []
+
+    class FakeDeepSeekClient:
+        def __init__(self, generation, timeout, *, ledger):
+            assert generation == "generation-config"
+            assert timeout == 20
+            self.ledger = ledger
+            ledgers.append(ledger)
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_args):
+            return False
+
+        def chat(self, _messages, **_options):
+            reservation = self.ledger.reserve(RUN, 20)
+            self.ledger.settle(reservation, 12)
+            return {
+                "choices": [
+                    {
+                        "message": {
+                            "content": json.dumps(
+                                {
+                                    "intent": "report_request",
+                                    "reply": "",
+                                    "report_subject": "人工智能现状",
+                                    "needs_clarification": False,
+                                    "questions": [],
+                                    "preferences": [],
+                                    "confidence": 1.0,
+                                    "reason_code": "explicit_defaults",
+                                },
+                                ensure_ascii=False,
+                            )
+                        }
+                    }
+                ]
+            }
+
+    monkeypatch.setattr(
+        cli,
+        "load_settings",
+        lambda _root: SimpleNamespace(generation="generation-config", timeout=20),
+    )
+    monkeypatch.setattr(cli, "DeepSeekClient", FakeDeepSeekClient)
+    monkeypatch.setattr(
+        cli,
+        "_new_teaching_dialogue_ledger",
+        lambda _root, *, run_id, session_directory: PersistentTokenLedger(
+            run_id,
+            session_directory / "dialogue_token_usage.json",
+            limits=BudgetLimits(),
+        ),
+    )
+
+    result = run_teaching_session(
+        tmp_path,
+        run_id="teach-dialogue-ledger",
+        search_agent_url="http://127.0.0.1:8001/",
+        document_agent_url="http://127.0.0.1:8002/",
+        model_route=True,
+        input_reader=lambda _prompt: "输出一份人工智能现状分析报告，偏好默认即可",
+        output=output.append,
+        service_manager_cls=FakeManager,
+        trace_follower_cls=FakeFollower,
+        workflow_runner=lambda _root, **kwargs: {
+            "run_id": kwargs["run_id"],
+            "phase": "report_pdf_exported",
+            "report_markdown_artifact": {},
+            "report_pdf_artifact": {},
+            "events": [],
+            "a2a_tasks": [],
+        },
+        rag_preflight=lambda _root: 0,
+    )
+
+    usage_path = run_directory(tmp_path, "teach-dialogue-ledger") / "token_usage.json"
+    assert result["status"] == "completed"
+    assert ledgers[0].run_id == "teach-dialogue-ledger"
+    assert json.loads(usage_path.read_text(encoding="utf-8"))["actual"] == {RUN: 12}
+    assert not list((tmp_path / "data" / "teaching_sessions").rglob("dialogue_token_usage.json"))
+
+
+def test_teaching_session_discards_dialogue_ledger_without_a_report(monkeypatch, tmp_path):
+    class FakeDeepSeekClient:
+        def __init__(self, _generation, _timeout, *, ledger):
+            self.ledger = ledger
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_args):
+            return False
+
+        def chat(self, _messages, **_options):
+            reservation = self.ledger.reserve(RUN, 20)
+            self.ledger.settle(reservation, 12)
+            return {
+                "choices": [
+                    {
+                        "message": {
+                            "content": json.dumps(
+                                {
+                                    "intent": "conversation",
+                                    "reply": "你好。",
+                                    "report_subject": "",
+                                    "needs_clarification": False,
+                                    "questions": [],
+                                    "preferences": [],
+                                    "confidence": 1.0,
+                                    "reason_code": "conversation",
+                                },
+                                ensure_ascii=False,
+                            )
+                        }
+                    }
+                ]
+            }
+
+    monkeypatch.setattr(
+        cli,
+        "load_settings",
+        lambda _root: SimpleNamespace(generation="generation-config", timeout=20),
+    )
+    monkeypatch.setattr(cli, "DeepSeekClient", FakeDeepSeekClient)
+    monkeypatch.setattr(
+        cli,
+        "_new_teaching_dialogue_ledger",
+        lambda _root, *, run_id, session_directory: PersistentTokenLedger(
+            run_id,
+            session_directory / "dialogue_token_usage.json",
+            limits=BudgetLimits(),
+        ),
+    )
+    answers = iter(["你好", ""])
+
+    result = run_teaching_session(
+        tmp_path,
+        run_id="teach-chat-only",
+        search_agent_url="http://127.0.0.1:8001/",
+        document_agent_url="http://127.0.0.1:8002/",
+        model_route=True,
+        input_reader=lambda _prompt: next(answers),
+        output=lambda _line: None,
+        service_manager_cls=FakeManager,
+        trace_follower_cls=FakeFollower,
+    )
+
+    assert result["status"] == "cancelled"
+    assert not list((tmp_path / "data" / "teaching_sessions").rglob("dialogue_token_usage.json"))
+    assert not (tmp_path / "data" / "runs").exists()
+
+
+def test_teaching_session_keeps_confirmed_report_ledger_when_service_start_fails(monkeypatch, tmp_path):
+    class FailingManager(FakeManager):
+        def ensure_services(self):
+            raise RuntimeError("service_start_failed")
+
+    class FakeDeepSeekClient:
+        def __init__(self, _generation, _timeout, *, ledger):
+            self.ledger = ledger
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_args):
+            return False
+
+        def chat(self, _messages, **_options):
+            reservation = self.ledger.reserve(RUN, 20)
+            self.ledger.settle(reservation, 12)
+            return {
+                "choices": [
+                    {
+                        "message": {
+                            "content": json.dumps(
+                                {
+                                    "intent": "report_request",
+                                    "reply": "",
+                                    "report_subject": "人工智能现状",
+                                    "needs_clarification": False,
+                                    "questions": [],
+                                    "preferences": [],
+                                    "confidence": 1.0,
+                                    "reason_code": "explicit_defaults",
+                                },
+                                ensure_ascii=False,
+                            )
+                        }
+                    }
+                ]
+            }
+
+    monkeypatch.setattr(
+        cli,
+        "load_settings",
+        lambda _root: SimpleNamespace(generation="generation-config", timeout=20),
+    )
+    monkeypatch.setattr(cli, "DeepSeekClient", FakeDeepSeekClient)
+    monkeypatch.setattr(
+        cli,
+        "_new_teaching_dialogue_ledger",
+        lambda _root, *, run_id, session_directory: PersistentTokenLedger(
+            run_id,
+            session_directory / "dialogue_token_usage.json",
+            limits=BudgetLimits(),
+        ),
+    )
+
+    try:
+        run_teaching_session(
+            tmp_path,
+            run_id="teach-service-failure",
+            search_agent_url="http://127.0.0.1:8001/",
+            document_agent_url="http://127.0.0.1:8002/",
+            model_route=True,
+            input_reader=lambda _prompt: "输出一份人工智能现状分析报告，偏好默认即可",
+            output=lambda _line: None,
+            service_manager_cls=FailingManager,
+            trace_follower_cls=FakeFollower,
+        )
+    except RuntimeError as exc:
+        assert str(exc) == "service_start_failed"
+    else:
+        raise AssertionError("expected_service_start_failure")
+
+    usage_path = run_directory(tmp_path, "teach-service-failure") / "token_usage.json"
+    assert json.loads(usage_path.read_text(encoding="utf-8"))["actual"] == {RUN: 12}
+    assert not list((tmp_path / "data" / "teaching_sessions").rglob("dialogue_token_usage.json"))
+
+
+def test_teaching_session_preserves_dialogue_usage_after_model_failure(monkeypatch, tmp_path):
+    class FakeDeepSeekClient:
+        def __init__(self, _generation, _timeout, *, ledger):
+            self.ledger = ledger
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_args):
+            return False
+
+        def chat(self, _messages, **_options):
+            reservation = self.ledger.reserve(RUN, 20)
+            self.ledger.settle(reservation, 12)
+            return {"choices": [{"message": {"content": "not-json"}}]}
+
+    monkeypatch.setattr(
+        cli,
+        "load_settings",
+        lambda _root: SimpleNamespace(generation="generation-config", timeout=20),
+    )
+    monkeypatch.setattr(cli, "DeepSeekClient", FakeDeepSeekClient)
+    monkeypatch.setattr(
+        cli,
+        "_new_teaching_dialogue_ledger",
+        lambda _root, *, run_id, session_directory: PersistentTokenLedger(
+            run_id,
+            session_directory / "dialogue_token_usage.json",
+            limits=BudgetLimits(),
+        ),
+    )
+    output = []
+
+    result = run_teaching_session(
+        tmp_path,
+        run_id="teach-dialogue-failure",
+        search_agent_url="http://127.0.0.1:8001/",
+        document_agent_url="http://127.0.0.1:8002/",
+        model_route=True,
+        input_reader=lambda _prompt: "你好",
+        output=output.append,
+        service_manager_cls=FakeManager,
+        trace_follower_cls=FakeFollower,
+    )
+
+    usage_path = run_directory(tmp_path, "teach-dialogue-failure") / "token_usage.json"
+    assert result == {"status": "failed", "error": "invalid_json"}
+    assert run_directory(tmp_path, "teach-dialogue-failure").name.endswith("__对话失败")
+    assert json.loads(usage_path.read_text(encoding="utf-8"))["actual"] == {RUN: 24}
+    assert any(f"Token 账本：{usage_path}" == line for line in output)
+    assert not list((tmp_path / "data" / "teaching_sessions").rglob("dialogue_token_usage.json"))
+
+
+def test_teaching_session_rejects_an_occupied_explicit_run_id_before_model_call(monkeypatch, tmp_path):
+    register_run_directory(tmp_path, "teach-occupied", "既有报告")
+    output = []
+
+    class UnexpectedDeepSeekClient:
+        def __init__(self, *_args, **_kwargs):
+            raise AssertionError("model_should_not_be_called")
+
+    monkeypatch.setattr(cli, "DeepSeekClient", UnexpectedDeepSeekClient)
+
+    result = run_teaching_session(
+        tmp_path,
+        run_id="teach-occupied",
+        search_agent_url="http://127.0.0.1:8001/",
+        document_agent_url="http://127.0.0.1:8002/",
+        model_route=True,
+        input_reader=lambda _prompt: (_ for _ in ()).throw(AssertionError("input_should_not_be_read")),
+        output=output.append,
+        service_manager_cls=FakeManager,
+        trace_follower_cls=FakeFollower,
+    )
+
+    assert result == {"status": "failed", "error": "teaching_run_id_already_exists"}
+    assert output == ["[对话失败] 错误码：teaching_run_id_already_exists，请使用新的 --run-id。"]
+    assert not list((tmp_path / "data" / "teaching_sessions").rglob("dialogue_token_usage.json"))
 
 
 def test_teach_command_runs_without_allow_paid_flag(tmp_path, monkeypatch):

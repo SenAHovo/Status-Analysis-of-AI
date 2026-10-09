@@ -4,6 +4,7 @@ import argparse
 import asyncio
 import hashlib
 import json
+import os
 from contextlib import ExitStack
 from datetime import UTC, datetime
 from pathlib import Path
@@ -24,10 +25,13 @@ from ai_status_report.schemas.report import ArtifactRef
 from ai_status_report.settings import ConfigError, bootstrap, load_settings
 from ai_status_report.smoke import run_checks
 from ai_status_report.storage.search_results import (
+    canonicalize_run_id,
     register_run_directory,
     run_directory,
     run_id_for_directory,
 )
+from ai_status_report.token_budget.config import load_budget_limits
+from ai_status_report.token_budget.runtime import PersistentTokenLedger
 
 
 def _run_report_workflow(
@@ -123,6 +127,66 @@ def _new_teach_run_id() -> str:
     return "teach-" + datetime.now(UTC).strftime("%Y%m%dT%H%M%S%fZ")
 
 
+def _teaching_run_id_is_occupied(root: Path, run_id: str) -> bool:
+    """Reject explicit teaching identifiers before a dialogue call can bill usage."""
+
+    canonical_run_id = canonicalize_run_id(run_id)
+    runs_root = root / "data" / "runs"
+    label = runs_root / ".run_labels" / f"{canonical_run_id}.json"
+    return run_directory(root, canonical_run_id).exists() or label.is_file()
+
+
+def _new_teaching_dialogue_ledger(
+    root: Path, *, run_id: str, session_directory: Path
+) -> PersistentTokenLedger:
+    """Persist paid dialogue use until it can be attached to its report run.
+
+    The temporary location keeps non-report conversations out of ``data/runs``.
+    Its snapshot already carries the eventual stable ``run_id``, so promotion
+    never rewrites or loses any settled provider usage.
+    """
+
+    return PersistentTokenLedger(
+        run_id,
+        session_directory / "dialogue_token_usage.json",
+        limits=load_budget_limits(root),
+    )
+
+
+def _promote_teaching_dialogue_ledger(
+    ledger: PersistentTokenLedger, *, run_directory_path: Path
+) -> Path:
+    """Move a settled dialogue ledger into the registered report directory."""
+
+    destination = run_directory_path / "token_usage.json"
+    if destination.exists():
+        raise RuntimeError("teaching_dialogue_ledger_destination_exists")
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    os.replace(ledger.path, destination)
+    ledger.lock_path.unlink(missing_ok=True)
+    return destination
+
+
+def _discard_teaching_dialogue_ledger(ledger: PersistentTokenLedger) -> None:
+    """Remove transient accounting when the user leaves before creating a report."""
+
+    ledger.path.unlink(missing_ok=True)
+    ledger.lock_path.unlink(missing_ok=True)
+    try:
+        ledger.path.parent.rmdir()
+    except OSError:
+        pass
+
+
+def _preserve_failed_teaching_dialogue_ledger(
+    root: Path, *, run_id: str, ledger: PersistentTokenLedger
+) -> Path:
+    """Attach paid dialogue usage to a failed run without inventing a report topic."""
+
+    failed_run_root = register_run_directory(root, run_id, "对话失败")
+    return _promote_teaching_dialogue_ledger(ledger, run_directory_path=failed_run_root)
+
+
 def _artifact_path(payload: object) -> str:
     if not isinstance(payload, dict):
         return ""
@@ -165,12 +229,26 @@ def run_teaching_session(
 
     manager = service_manager_cls(root)
     follower = None
+    dialogue_ledger: PersistentTokenLedger | None = None
+    dialogue_ledger_promoted = False
+    actual_run_id = run_id or _new_teach_run_id()
     with ExitStack() as stack:
         try:
+            if run_id is not None and _teaching_run_id_is_occupied(root, actual_run_id):
+                error_code = "teaching_run_id_already_exists"
+                output(f"[对话失败] 错误码：{error_code}，请使用新的 --run-id。")
+                return {"status": "failed", "error": error_code}
             dialogue_model = None
             if model_route:
                 settings = load_settings(root)
-                client = stack.enter_context(DeepSeekClient(settings.generation, settings.timeout))
+                dialogue_ledger = _new_teaching_dialogue_ledger(
+                    root,
+                    run_id=actual_run_id,
+                    session_directory=manager.log_directory.parent,
+                )
+                client = stack.enter_context(
+                    DeepSeekClient(settings.generation, settings.timeout, ledger=dialogue_ledger)
+                )
                 dialogue_model = StructuredDialogueModel(client)
             session = DialogueSession(root, model=dialogue_model)
             text = input_reader("\n请输入内容，直接回车退出：").strip()
@@ -182,6 +260,12 @@ def run_teaching_session(
                     turn = session.handle(text)
                 except DialogueModelError as exc:
                     error_code = str(exc) or "dialogue_model_failed"
+                    if dialogue_ledger is not None:
+                        usage_path = _preserve_failed_teaching_dialogue_ledger(
+                            root, run_id=actual_run_id, ledger=dialogue_ledger
+                        )
+                        dialogue_ledger_promoted = True
+                        output(f"Token 账本：{usage_path}")
                     output(f"[对话失败] 错误码：{error_code}，本次会话已停止。")
                     return {"status": "failed", "error": error_code}
                 if turn.status in {"conversation", "unsupported"}:
@@ -221,6 +305,14 @@ def run_teaching_session(
                     output(line)
                 break
 
+            # A confirmed report request owns a stable run before any local
+            # service can fail. This preserves already-settled dialogue usage
+            # for failed report attempts as well as successful deliveries.
+            brief = brief.model_copy(update={"run_id": actual_run_id})
+            run_root = register_run_directory(root, actual_run_id, brief.topic)
+            if dialogue_ledger is not None:
+                _promote_teaching_dialogue_ledger(dialogue_ledger, run_directory_path=run_root)
+                dialogue_ledger_promoted = True
             services = manager.ensure_services()
             chroma_service = next(service for service in services if service.spec.name == "chroma")
             try:
@@ -240,9 +332,6 @@ def run_teaching_session(
                 service_state = "复用已有服务" if service.reused else "已启动"
                 output(f"[服务] {service.spec.name}：{service_state}")
             output(f"[服务] chroma：索引预检通过（当前索引块：{indexed_count}）。")
-            actual_run_id = run_id or _new_teach_run_id()
-            brief = brief.model_copy(update={"run_id": actual_run_id})
-            run_root = register_run_directory(root, actual_run_id, brief.topic)
             trace_directory = run_root / "traces"
             follower = trace_follower_cls(trace_directory, output=output)
             output(f"\n[运行] run_id：{actual_run_id}")
@@ -283,6 +372,8 @@ def run_teaching_session(
             if follower is not None:
                 follower.poll_once()
                 follower.stop()
+            if dialogue_ledger is not None and not dialogue_ledger_promoted:
+                _discard_teaching_dialogue_ledger(dialogue_ledger)
             manager.stop()
 
 

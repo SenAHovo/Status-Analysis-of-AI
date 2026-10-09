@@ -6,6 +6,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
+from ai_status_report.context.evidence_boundary import EXTERNAL_EVIDENCE_BOUNDARY
 from ai_status_report.documents.markdown import (
     CitationPlan,
     MarkdownProtocolError,
@@ -103,7 +104,10 @@ def _assemble(
     citation_plan = build_citation_plan(bundle)
     system = {
         "role": "system",
-        "content": f"{system_role}\n\n适用业务指导：\n{guidance.body}",
+        "content": (
+            f"{system_role}\n\n外部证据边界：\n{EXTERNAL_EVIDENCE_BOUNDARY}"
+            f"\n\n适用业务指导：\n{guidance.body}"
+        ),
     }
     user_prefix = "章节任务：\n" + json.dumps(task_payload, ensure_ascii=False)
     fixed_messages = [system, {"role": "user", "content": user_prefix}]

@@ -1,23 +1,28 @@
 {
   "snapshot_type": "public_teaching_run",
   "source_run_id": "teach-20260930T071526421985Z",
-  "copied_files": 198,
-  "redacted_values": 90,
+  "copied_files": 25,
+  "redacted_values": 71,
   "included_directories": [
     "chapters",
-    "evidence",
-    "evidence_bundles",
     "outlines",
-    "raw",
-    "reports",
     "reviews",
     "traces",
     "service_logs"
   ],
+  "included_report_files": [
+    "report.md",
+    "report.pdf"
+  ],
   "included_root_files": [
     "token_usage.json"
   ],
+  "source_manifest": "sources.json",
+  "source_count": 20,
   "excluded": [
+    "raw provider responses and crawled web pages",
+    "EvidenceChunk text and chapter evidence bundles",
+    "search report snippets",
     "token_usage.lock",
     "local virtual environments",
     "credential files"

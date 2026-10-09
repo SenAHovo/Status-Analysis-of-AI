@@ -33,8 +33,8 @@ Chroma、A2A 服务、Playwright Chromium 和其余 Python 依赖均由项目命
 ## 安装与配置
 
 ```powershell
-git clone <repository-url>
-Set-Location <repository-directory>
+git clone https://github.com/SenAHovo/Status-Analysis-of-AI.git
+Set-Location Status-Analysis-of-AI
 
 # 创建虚拟环境并安装锁定依赖
 uv sync --locked
@@ -85,7 +85,7 @@ data/runs/<run_id>__<主题>/
 └── token_usage.json
 ```
 
-`data/` 是本地运行目录，默认不纳入 Git。仓库在 [`examples/runs/teach-20260930T071526421985Z__人工智能现状/`](examples/runs/teach-20260930T071526421985Z__人工智能现状/) 保留了一次完整运行的公开快照，包含最终 Markdown/PDF、检索与证据产物、章节与审核成果、Token 账本和脱敏 trace，便于不配置 API 时查看完整任务链。
+`data/` 是本地运行目录，默认不纳入 Git。仓库在 [`examples/runs/teach-20260930T071526421985Z__人工智能现状/`](examples/runs/teach-20260930T071526421985Z__人工智能现状/) 保留了一次完整运行的公开快照，包含最终 Markdown/PDF、章节与审核成果、Token 账本、脱敏 trace、服务日志和来源元数据清单，便于不配置 API 时查看完整任务链。快照不包含第三方网页全文、检索摘录或证据正文。
 
 ## 项目结构
 
@@ -106,7 +106,7 @@ examples/                 可直接查看的完整运行结果快照
 uv run pytest -q
 uv run ruff check .
 uv run ai-status check-config
-uv run python scripts/audit_secrets.py
+uv run python scripts/audit_secrets.py --mode public
 ```
 
 `teach` 是真实端到端任务，会调用配置的检索、嵌入、写作和审核服务。检索来源、模型输出与最终报告会随运行时间、外部服务和用户偏好变化。

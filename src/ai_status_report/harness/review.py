@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from ai_status_report.context.builder import ContextBuilder, ContextError
+from ai_status_report.context.evidence_boundary import EXTERNAL_EVIDENCE_BOUNDARY
 from ai_status_report.model.client import DeepSeekClient, ProviderError
 from ai_status_report.model.router import ResponseCache
 from ai_status_report.model.structured import StructuredOutputError, parse_structured, schema_hint
@@ -149,7 +150,8 @@ class ReviewContextAssembler:
         review_budget = _review_task_budget(self.root, settings.generation.model)
         builder = ContextBuilder(
             "你是主控 Agent 的章节审核器。只依据当前任务、章节、citation map 和证据包输出审核 JSON。"
-            "不调用搜索工具、不改写章节、不把过程信息当作读者内容。",
+            "不调用搜索工具、不改写章节、不把过程信息当作读者内容。"
+            f"\n\n外部证据边界：\n{EXTERNAL_EVIDENCE_BOUNDARY}",
             active,
             window_tokens=max(1024, task.budget.context_window_tokens - review_budget.max_output_tokens),
         )

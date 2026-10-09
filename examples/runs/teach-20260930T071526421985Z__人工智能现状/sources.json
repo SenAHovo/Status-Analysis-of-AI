@@ -1,0 +1,162 @@
+[
+  {
+    "source_id": "tavily-28c460efaafd-1",
+    "title": "我国生成式人工智能的发展现状与趋势",
+    "url": "https://paper.people.com.cn/rmlt/pc/content/202502/05/content_30059342.html",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "632d7f11b237e89de556257e5740d3bc409d7ffe934d598cf63e45761bac3efb"
+  },
+  {
+    "source_id": "tavily-28c460efaafd-2",
+    "title": "人工智能主要趋势 | IBM",
+    "url": "https://www.ibm.com/cn-zh/think/insights/artificial-intelligence-trends",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "27ca1f1dcf9111861c3c6e099b4eba579e9e3904b03193a747b18a403043347e"
+  },
+  {
+    "source_id": "tavily-28c460efaafd-3",
+    "title": "China Archives - Page 5 of 17 - IDC",
+    "url": "https://www.idc.com/resource-center/blog/resource-region/3_337/page/5",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "349c27aa4906dba72bdce9d5862eb9acf9ad16b11b76c2a27002ccea8535d35d"
+  },
+  {
+    "source_id": "tavily-28c460efaafd-4",
+    "title": "人工智能发展趋势及应对策略 | OpenAI",
+    "url": "https://openai.com/zh-Hans-CN/index/ai-progress-and-recommendations",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "e68b7c70c2b388b8238b846b8a8ec97fa011f416a50e930805b5422fb704d4c5"
+  },
+  {
+    "source_id": "tavily-28c460efaafd-5",
+    "title": "2025年六大AI趋势展望 - Microsoft Research",
+    "url": "https://www.microsoft.com/en-us/research/articles/6-ai-trends-in-2025",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "a28c5704f8b663fcc1d5b605d7e638a9f55f211691179712f916701ade9398bd"
+  },
+  {
+    "source_id": "tavily-30c64c26ae63-1",
+    "title": "人工智能的历史、现状和未来 - 求是网",
+    "url": "https://www.qstheory.cn/dukan/qs/2019-02/16/c_1124114625.htm",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "2d81ef3b17da13d4870b6cc52366b552ef6f7c64433caa03c4569b4b38996a21"
+  },
+  {
+    "source_id": "tavily-30c64c26ae63-2",
+    "title": "介绍2025年人工智能指数报告 - Stanford HAI",
+    "url": "https://hai.stanford.edu/assets/files/hai_ai_index_report_2025_chinese_version_061325.pdf",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "0198b16a8588e3d35bfb1f5f0482594a34d07e4e10968bb1ee99fee76f9b477f"
+  },
+  {
+    "source_id": "tavily-30c64c26ae63-3",
+    "title": "我国人工智能政策文本量化研究 ——政策现状与前沿趋势",
+    "url": "https://www.kjjb.org/fileup/HTML/2021-38-15-015.htm",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "02177772a227b065536642c4a401fa8513b7103208f64feb2d10e5ed073324c2"
+  },
+  {
+    "source_id": "tavily-30c64c26ae63-4",
+    "title": "人工智能对社会科学研究影响深远",
+    "url": "https://www.stdaily.com/web/gdxw/2025-06/20/content_358102.html",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "99203b331cefbfb35ae9f35eee411cecf92de7ebf3451750d85f53ee9957a6c6"
+  },
+  {
+    "source_id": "tavily-30c64c26ae63-5",
+    "title": "欧盟人工智能法案： 指南",
+    "url": "https://www.twobirds.com/-/media/new-website-content/pdfs/capabilities/artificial-intelligence/eu-ai-act-guide-chinese-version.pdf",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "04746849e388be9ecd3752db2c3d8baf4bf1f60def19d7be45716eb06a413352"
+  },
+  {
+    "source_id": "tavily-7041b75ed906-1",
+    "title": "Xue Lan: AI Governance from a Global Perspective – Challenges, Mechanisms, and Future Pathways - Opinions - Center For International Security And Strategy Tsinghua University",
+    "url": "https://ciss.tsinghua.edu.cn/info/Opinions/12499",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "45754fd7bdda92bbfcbb7b06be31aa1590836144928fd7cd4fed8f85904bb057"
+  },
+  {
+    "source_id": "tavily-7041b75ed906-2",
+    "title": "前沿人工智能风险管理框架(v1.0)",
+    "url": "https://concordia-ai.com/wp-content/uploads/2025/07/Frontier-AI-Risk-Management-Framework-v1.0-cn.pdf",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "310ef7cd7166677efa36983e577487e4b18109d60e32edb47a509e23d2d03429"
+  },
+  {
+    "source_id": "tavily-7041b75ed906-3",
+    "title": "企业智能之旅（6）：安全与负责任的 AI | 亚马逊AWS官方博客",
+    "url": "https://aws.amazon.com/cn/blogs/china/the-journey-for-enterprise-to-use-artificial-intelligence-part-six",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "29320d778bc3f58e62d45c72e5e136d8fb55f46a71636f5108aef71de12efba9"
+  },
+  {
+    "source_id": "tavily-7041b75ed906-4",
+    "title": "AI 教练：最佳实践  |  Agent Assist  |  Google Cloud Documentation",
+    "url": "https://docs.cloud.google.com/agent-assist/docs/ai-coach-best-practices?hl=zh-cn",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "3dc63afb7afb3fd3964fb8bf674b377cfb203b757ba95fc9d4ca7730d27e00c8"
+  },
+  {
+    "source_id": "tavily-7041b75ed906-5",
+    "title": "我国人工智能风险分级分类监管制度研究 ——域外比较与本土构建",
+    "url": "https://www.kjjb.org/article/2026/1001-7348/2026-43-1-011.htm",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "6af3acee2c936fae7e2671439b5b858dd1ae2185ea87cf4128f761fcab44335f"
+  },
+  {
+    "source_id": "tavily-fbf04878a66f-1",
+    "title": "ai目前发展到什么程度了 - 搜狗搜索",
+    "url": "https://www.sogou.com/web?query=ai%E7%9B%AE%E5%89%8D%E5%8F%91%E5%B1%95%E5%88%B0%E4%BB%80%E4%B9%88%E7%A8%8B%E5%BA%A6%E4%BA%86&s_from=pc_wendaka&sessiontime=1773093791302",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "4c6454f54d0704e0cfdca39c1fb01d13090d60a19f6719daea4d5312f0b07843"
+  },
+  {
+    "source_id": "tavily-fbf04878a66f-2",
+    "title": "[PDF] 人工智能技术与体育应用的现状与发展",
+    "url": "https://www.sxsportsworld.com/rc-pub/front/front-article/download/97769777/lowqualitypdf/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%8A%80%E6%9C%AF%E4%B8%8E%E4%BD%93%E8%82%B2%E5%BA%94%E7%94%A8%E7%9A%84%E7%8E%B0%E7%8A%B6%E4%B8%8E%E5%8F%91%E5%B1%95.pdf",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "0fb33d00af24aa5b84a9623a824f682ab3a9fe1e6c670b7c869cf0be1a33c672"
+  },
+  {
+    "source_id": "tavily-fbf04878a66f-3",
+    "title": "什么是 MIA？为什么它是 DeFi 中人工智能的未来？",
+    "url": "https://bitkan.com/zh/learn/%E4%BB%80%E4%B9%88%E6%98%AF-mia-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AE%83%E6%98%AF-defi-%E4%B8%AD%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%9C%AA%E6%9D%A5-64730",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "9b5a6a8578f87fb49da4a359fbe2166d1171095f8264a73acf6bc4fd19d2a93b"
+  },
+  {
+    "source_id": "tavily-fbf04878a66f-4",
+    "title": "BRIC是什么？BRIC 代币的主要用途是什么？",
+    "url": "https://bitkan.com/zh/learn/bric%E6%98%AF%E4%BB%80%E4%B9%88-bric-%E4%BB%A3%E5%B8%81%E7%9A%84%E4%B8%BB%E8%A6%81%E7%94%A8%E9%80%94%E6%98%AF%E4%BB%80%E4%B9%88-57853",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "43ff8b19a2dfb200827410227734075536de514196f51f02be83b1336e8e6476"
+  },
+  {
+    "source_id": "tavily-fbf04878a66f-5",
+    "title": "什么是惊恐发作？症状和你应该做什么 - Probesto CN",
+    "url": "https://www.probesto.com/cn/%E4%BB%80%E4%B9%88%E6%98%AF%E6%83%8A%E6%81%90%E5%8F%91%E4%BD%9C%EF%BC%9F%E7%97%87%E7%8A%B6%E5%92%8C%E4%BD%A0%E5%BA%94%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88",
+    "provider": "tavily_mcp",
+    "verification_status": "retrieved",
+    "content_sha256": "7133f1c160484ddb70b36fb1f9869dca76ee8a1c87d6607193269bf45dafae3d"
+  }
+]
