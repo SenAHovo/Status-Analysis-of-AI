@@ -17,9 +17,8 @@ API: synthetic-deepseek
 model: deepseek-v4-flash
 base_url: https://api.deepseek.com
 
-文档服务
+向量服务
 API: synthetic-glm
-model: GLM-OCR
 model: Embedding-3
 base_url: https://open.bigmodel.cn/api/paas/v4
 """
@@ -27,9 +26,9 @@ base_url: https://open.bigmodel.cn/api/paas/v4
 
 def test_sections_and_case_normalization():
     parsed = parse_legacy(LEGACY)
-    assert parsed["GLM_OCR_MODEL"] == "glm-ocr"
-    assert parsed["DEEPSEEK_API_KEY"] != parsed["GLM_OCR_API_KEY"]
-    assert parsed["GLM_OCR_API_KEY"] == parsed["GLM_EMBEDDING_API_KEY"]
+    assert parsed["DEEPSEEK_API_KEY"] != parsed["GLM_EMBEDDING_API_KEY"]
+    assert parsed["GLM_EMBEDDING_MODEL"] == "embedding-3"
+    assert all(not name.startswith("GLM_OCR_") for name in parsed)
 
 
 @pytest.mark.parametrize(
@@ -64,6 +63,14 @@ def test_environment_priority_and_secret_repr(tmp_path):
     assert (settings.chroma_host, settings.chroma_port) == ("127.0.0.1", 8000)
 
 
+def test_ocr_credential_is_not_required(tmp_path):
+    settings = load_settings(
+        tmp_path,
+        {"DEEPSEEK_API_KEY": "generation", "GLM_EMBEDDING_API_KEY": "embedding"},
+    )
+    assert settings.embedding.model == "embedding-3"
+
+
 @pytest.mark.parametrize(
     "override",
     [
@@ -87,7 +94,7 @@ def test_invalid_settings_fail_safely(tmp_path, override):
 
 def test_interpolation_is_disabled(tmp_path):
     (tmp_path / ".env").write_text("DEEPSEEK_API_KEY='${UNRELATED_SECRET}'\n", encoding="utf-8")
-    settings = load_settings(tmp_path, {"GLM_OCR_API_KEY": "ocr", "GLM_EMBEDDING_API_KEY": "embed"})
+    settings = load_settings(tmp_path, {"GLM_EMBEDDING_API_KEY": "embed"})
     assert settings.generation.api_key == "${UNRELATED_SECRET}"
 
 

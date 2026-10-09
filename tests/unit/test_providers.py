@@ -207,3 +207,11 @@ def test_usage_allowlist():
     assert safe_usage({"usage": {"total_tokens": 5, "other": "secret", "prompt_tokens": True}}) == {
         "total_tokens": 5
     }
+
+
+def test_provider_rejects_removed_document_parsing_endpoint():
+    with (
+        GLMClient(PROFILE, 5, transport=httpx.MockTransport(lambda request: httpx.Response(200))) as client,
+        pytest.raises(ProviderError, match="unapproved_api_path"),
+    ):
+        client.post("/layout_parsing", {})

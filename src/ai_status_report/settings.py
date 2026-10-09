@@ -16,8 +16,6 @@ class ConfigError(ValueError):
 DEFAULTS = {
     "DEEPSEEK_BASE_URL": "https://api.deepseek.com",
     "DEEPSEEK_MODEL": "deepseek-v4-flash",
-    "GLM_OCR_BASE_URL": "https://open.bigmodel.cn/api/paas/v4",
-    "GLM_OCR_MODEL": "glm-ocr",
     "GLM_EMBEDDING_BASE_URL": "https://open.bigmodel.cn/api/paas/v4",
     "GLM_EMBEDDING_MODEL": "embedding-3",
     "GLM_EMBEDDING_DIMENSIONS": "2048",
@@ -29,7 +27,7 @@ DEFAULTS = {
     "CHROMA_HOST": "127.0.0.1",
     "CHROMA_PORT": "8000",
 }
-KEYS = ("DEEPSEEK_API_KEY", "GLM_OCR_API_KEY", "GLM_EMBEDDING_API_KEY")
+KEYS = ("DEEPSEEK_API_KEY", "GLM_EMBEDDING_API_KEY")
 
 
 @dataclass(frozen=True)
@@ -42,7 +40,6 @@ class Profile:
 @dataclass(frozen=True)
 class Settings:
     generation: Profile
-    ocr: Profile
     embedding: Profile
     dimensions: int
     timeout: float
@@ -131,7 +128,7 @@ def load_settings(root: Path, environ=None) -> Settings:
             raise ConfigError(f"missing credential: {key}")
     profiles = [
         _profile_from_values(values, prefix, required=True)
-        for prefix in ("DEEPSEEK", "GLM_OCR", "GLM_EMBEDDING")
+        for prefix in ("DEEPSEEK", "GLM_EMBEDDING")
     ]
     try:
         dimensions = int(values["GLM_EMBEDDING_DIMENSIONS"])
@@ -145,14 +142,15 @@ def load_settings(root: Path, environ=None) -> Settings:
     ):
         raise ConfigError("numeric configuration outside approved bounds")
     return Settings(
-        *profiles,
-        dimensions,
-        timeout,
-        str(values.get("TAVILY_API_KEY") or ""),
-        tavily_url,
-        chroma_mode,
-        chroma_host,
-        chroma_port,
+        generation=profiles[0],
+        embedding=profiles[1],
+        dimensions=dimensions,
+        timeout=timeout,
+        tavily_api_key=str(values.get("TAVILY_API_KEY") or ""),
+        tavily_mcp_url=tavily_url,
+        chroma_client_mode=chroma_mode,
+        chroma_host=chroma_host,
+        chroma_port=chroma_port,
     )
 
 
@@ -170,11 +168,8 @@ def parse_legacy(text: str) -> dict[str, str]:
         prefixes = []
         if any(m.startswith("deepseek-") for m in models):
             prefixes.append(("DEEPSEEK", next(m for m in models if m.startswith("deepseek-"))))
-        prefixes.extend(
-            (p, m)
-            for p, m in (("GLM_OCR", "glm-ocr"), ("GLM_EMBEDDING", "embedding-3"))
-            if m in models
-        )
+        if "embedding-3" in models:
+            prefixes.append(("GLM_EMBEDDING", "embedding-3"))
         if not prefixes:
             continue
         keys = fields.get("api", []) + fields.get("api_key", [])

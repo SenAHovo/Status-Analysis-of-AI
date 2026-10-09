@@ -1,12 +1,10 @@
-"""Explicit paid provider probes using only public test inputs."""
+"""Explicit paid provider probes using only public test inputs (at most six calls)."""
 
 import json
 from datetime import UTC, datetime
 
 from ai_status_report.model.client import DeepSeekClient, ProviderError
 from ai_status_report.rag.glm import GLMClient
-
-OCR_SAMPLE = "https://cdn.bigmodel.cn/static/logo/introduction.png"
 
 
 def safe_usage(result: dict) -> dict:
@@ -131,36 +129,6 @@ def run_checks(settings, service="all", *, ledger=None) -> dict:
                 }
 
             check("deepseek_stream", streaming)
-
-    if service in {"all", "ocr"}:
-        with GLMClient(settings.ocr, settings.timeout, ledger=ledger) as client:
-
-            def ocr_check():
-                result = client.parse_document(OCR_SAMPLE)
-                text = result.get("md_results")
-                pages = result.get("layout_details")
-                if (
-                    not isinstance(text, str)
-                    or not text.strip()
-                    or not isinstance(pages, list)
-                    or not pages
-                ):
-                    raise ProviderError("ocr_empty_text_or_layout")
-                blocks = [block for page in pages for block in page]
-                if not blocks or not all(
-                    isinstance(b, dict) and "bbox_2d" in b and len(b["bbox_2d"]) == 4
-                    for b in blocks
-                ):
-                    raise ProviderError("ocr_layout_schema")
-                return {
-                    "characters": len(text),
-                    "pages": len(pages),
-                    "blocks": len(blocks),
-                    "usage": safe_usage(result),
-                    "quality": "basic text/layout only; manual corpus review pending",
-                }
-
-            check("glm_ocr", ocr_check)
 
     if service in {"all", "embedding"}:
         with GLMClient(settings.embedding, settings.timeout, ledger=ledger) as client:

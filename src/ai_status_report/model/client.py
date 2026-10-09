@@ -40,7 +40,6 @@ class ProviderClient:
         if path not in {
             "/chat/completions",
             "/responses",
-            "/layout_parsing",
             "/embeddings",
             "/rerank",
         }:

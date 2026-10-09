@@ -1,6 +1,4 @@
-"""GLM APIs: https://docs.bigmodel.cn/api-reference/模型-api/文档解析
-Embedding: https://docs.bigmodel.cn/cn/guide/models/embedding/embedding-3
-"""
+"""GLM embedding and rerank clients."""
 
 import math
 
@@ -9,13 +7,6 @@ from ai_status_report.token_budget.estimator import estimate_tokens
 
 
 class GLMClient(ProviderClient):
-    def parse_document(self, file: str) -> dict:
-        return self.accounted_post(
-            "/layout_parsing",
-            {"model": self.profile.model, "file": file, "need_layout_visualization": True},
-            estimate=estimate_tokens(file),
-        )
-
     def embed(self, texts: list[str], dimensions: int) -> dict:
         if not texts or len(texts) > 16 or any(not t or len(t) > 1000 for t in texts):
             raise ProviderError("embedding_input_bounds")

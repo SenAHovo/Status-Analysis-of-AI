@@ -388,7 +388,7 @@ def main():
     sub.add_parser("reset-rag-store", help="delete the stopped local Chroma evidence store")
     smoke = sub.add_parser("smoke", help="small paid real-service checks")
     smoke.add_argument("--run-id", help="persist paid probe usage to this run")
-    smoke.add_argument("--service", choices=["all", "deepseek", "ocr", "embedding"], default="all")
+    smoke.add_argument("--service", choices=["all", "deepseek", "embedding"], default="all")
     route = sub.add_parser("route", help="route one request; model call is opt-in and cached")
     route.add_argument("text")
     route.add_argument("--run-id", help="persist paid routing usage to this run")

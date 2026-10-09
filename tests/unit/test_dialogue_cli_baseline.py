@@ -60,7 +60,6 @@ def test_show_usage_reports_a_missing_run(tmp_path, monkeypatch, capsys) -> None
 def test_check_config_succeeds_offline_without_echoing_values(tmp_path, monkeypatch, capsys) -> None:
     root = project_root(tmp_path)
     monkeypatch.setenv("DEEPSEEK_API_KEY", "sk-p0-placeholder-only")
-    monkeypatch.setenv("GLM_OCR_API_KEY", "glm-p0-placeholder-only")
     monkeypatch.setenv("GLM_EMBEDDING_API_KEY", "emb-p0-placeholder-only")
     monkeypatch.setattr(sys, "argv", ["ai-status", "--root", str(root), "check-config"])
 
@@ -68,7 +67,7 @@ def test_check_config_succeeds_offline_without_echoing_values(tmp_path, monkeypa
 
     out = capsys.readouterr().out
     assert "withheld" in out
-    for placeholder in ("sk-p0-placeholder-only", "glm-p0-placeholder-only", "emb-p0-placeholder-only"):
+    for placeholder in ("sk-p0-placeholder-only", "emb-p0-placeholder-only"):
         assert placeholder not in out
 
 

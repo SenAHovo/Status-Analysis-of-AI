@@ -25,7 +25,7 @@
 
 - Windows 10/11、Python 3.12、[uv](https://docs.astral.sh/uv/)。
 - DeepSeek API：对话、写作与审核模型。
-- 智谱 GLM API：`embedding-3` 向量模型；配置模板同时保留文档解析接口所需字段。
+- 智谱 GLM API：`embedding-3` 向量模型。
 - Tavily API：公开网页检索。
 
 Chroma、A2A 服务、Playwright Chromium 和其余 Python 依赖均由项目命令管理。Chroma 是本项目的向量数据库，包含在 Python 依赖中，无需另外安装桌面软件。
@@ -50,12 +50,11 @@ Copy-Item .env.example .env
 
 ```dotenv
 DEEPSEEK_API_KEY=
-GLM_OCR_API_KEY=
 GLM_EMBEDDING_API_KEY=
 TAVILY_API_KEY=
 ```
 
-`GLM_OCR_API_KEY` 是当前配置校验要求的凭证槽位；网页报告主链使用 `embedding-3` 建立向量索引。其余地址、模型名和本地 Chroma 配置已有默认值。不要提交 `.env` 或任何真实密钥。完成配置后执行检查：
+网页报告主链使用 `embedding-3` 建立向量索引。其余地址、模型名和本地 Chroma 配置已有默认值。不要提交 `.env` 或任何真实密钥。完成配置后执行检查：
 
 ```powershell
 uv run ai-status check-config

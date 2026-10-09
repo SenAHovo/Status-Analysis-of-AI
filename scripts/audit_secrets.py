@@ -20,7 +20,7 @@ PUBLIC_SECRET_PATTERNS = (
     re.compile(rb"(?i)authorization\s*[:=]\s*[\"']?bearer\s+[a-z0-9._~+/-]{16,}"),
 )
 KNOWN_CREDENTIAL_ASSIGNMENT = re.compile(
-    rb"(?im)\b(?:DEEPSEEK_API_KEY|GLM_OCR_API_KEY|GLM_EMBEDDING_API_KEY|TAVILY_API_KEY)"
+    rb"(?im)\b(?:DEEPSEEK_API_KEY|GLM_EMBEDDING_API_KEY|TAVILY_API_KEY)"
     rb"[ \t]*=[ \t]*[\"']?([a-z0-9_.-]{12,})"
 )
 PLACEHOLDER_VALUE_MARKERS = (b"placeholder", b"test", b"example", b"keep-existing")
